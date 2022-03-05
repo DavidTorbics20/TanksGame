@@ -14,18 +14,17 @@ public class MazeGenerator : MonoBehaviour
 
     void Start()
     {
-        //idea:
-        //make two adjascent cells share one wall
-        //for example: the right wall of currentCell is the left wall of nextCell
+        Invoke("GenerateGrid", 0.0f);
     }
 
-    public void GeneratePath()
+    public void GeneratePath() //alternativally i could use IEnumerator
     {
         WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
 
         //picks a cell to start at
         int rndX = Random.Range(1, sizeX);
         int rndY = Random.Range(1, sizeY);
+        Debug.Log(rndX + "," + rndY);
 
         //mark fist cell and make it currentCell
         MazeCell nextCell;
@@ -40,15 +39,10 @@ public class MazeGenerator : MonoBehaviour
             //push currentCell onto the Stack
             carvedCells.Push(currentCell.name);
             nextCell = EnumerateNeighbours(currentCell);
-            if (nextCell == null)
-            {
-                break;
-            }
             nextCell.visited = true;
             nextCell.sprite.color = new Color(255, 0, 0);
-            BreakWalls(currentCell, nextCell);
-            Debug.Log((currentCell.x, currentCell.y));
             currentCell = nextCell;
+            
             //yield return delay;
         } while (carvedCells.Count != 0);
     }
@@ -60,6 +54,7 @@ public class MazeGenerator : MonoBehaviour
         MazeCell neighbour;
         MazeCell nextCell;
 
+        currentCell.sprite.color = new Color(145, 25, 0);
         //top
         if (CheckIfPossible(currentCell.x, currentCell.y + 1)) 
         {
@@ -109,18 +104,19 @@ public class MazeGenerator : MonoBehaviour
             }
         }
 
-        //if no neighbours available pop from stack
-        if (neighbours.Count == 0)
+        //if no neighbours found go back to the point where at least 1 neighbour exists
+        if (neighbours.Count == 0 && carvedCells.Count != 0)
         {
             carvedCells.Pop();
-        }
-        else
-        {
-            nextCell = PickARandomCell(neighbours);
-            return nextCell;
+            string lastCell = carvedCells.Peek(); //lastCell means the last cell in stack
+            string[] coordinates = lastCell.Split(',');
+            currentCell = cells[System.Convert.ToInt32(coordinates[0]), System.Convert.ToInt32(coordinates[1])];
+            return EnumerateNeighbours(currentCell);
         }
 
-        return null;
+        nextCell = PickARandomCell(neighbours);
+        BreakWalls(currentCell, nextCell);
+        return nextCell;
     }
 
     private bool CheckIfPossible(int x, int y)
@@ -138,7 +134,6 @@ public class MazeGenerator : MonoBehaviour
         MazeCell nextCell;
         int rnd = Random.Range(0, neighbours.Count);
         nextCell = neighbours[rnd];
-        Debug.Log((nextCell.x, nextCell.y));
         return nextCell;
     }
 
@@ -166,19 +161,19 @@ public class MazeGenerator : MonoBehaviour
         }
     }
 
-    public IEnumerator GenerateGrid()
+    public void GenerateGrid()
     {
-        WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
         cells = new MazeCell[sizeX, sizeY];
         for (int i = 0; i < sizeX; i++)
         {
             for (int j = 0; j < sizeY; j++)
             {
-                yield return delay;
                 CreateCell(j, i);
             }
         }
-        GeneratePath();
+        //StartCoroutine(GeneratePath());
+        Invoke("GeneratePath", 0.1f);
+        //GeneratePath();
     }
 
     private void CreateCell(int x, int y)

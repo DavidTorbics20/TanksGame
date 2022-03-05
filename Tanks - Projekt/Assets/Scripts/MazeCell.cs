@@ -13,12 +13,4 @@ public class MazeCell : MonoBehaviour
     {
         visited = false;
     }
-
-    void Update()
-    {
-        if (visited)
-        {
-            sprite.color = new Color(255, 0, 0);
-        }
-    }
 }
