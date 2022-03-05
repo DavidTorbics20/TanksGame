@@ -7,13 +7,13 @@ public class MazeCell : MonoBehaviour
     public GameObject top, right, bottom, left;
     public SpriteRenderer sprite;
     public bool visited;
+    public int x, y;
 
     void Start()
     {
         visited = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (visited)
