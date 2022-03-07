@@ -47,7 +47,6 @@ MonoBehaviour:
     type: 3}
   cellSprite: {fileID: 6240968781793099416, guid: 78b4b32049b617d4192f57698d33e786,
     type: 3}
-  chance: 0.75
-  sizeX: 10
-  sizeY: 10
+  sizeX: 50
+  sizeY: 50
   generationStepDelay: 0

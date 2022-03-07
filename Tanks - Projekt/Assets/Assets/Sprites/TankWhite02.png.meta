@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 36f7fe91521ace846996e462b1e0c078
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3417353516440698935
+    second: Frame1
+  - first:
+      213: -4232862470806668886
+    second: TankWhite02_1
+  - first:
+      213: -1086763156986969280
+    second: TankWhite02_2
+  - first:
+      213: -6631761603133320595
+    second: TankWhite02_3
+  - first:
+      213: 4866357929029979974
+    second: TankWhite02_4
+  - first:
+      213: 4519566101461753987
+    second: TankWhite02_5
+  - first:
+      213: -4000899861882889869
+    second: TankWhite02_6
+  - first:
+      213: -7534120985690832458
+    second: Frame2
+  - first:
+      213: -8739437193760636971
+    second: TankWhite02_8
+  - first:
+      213: 7215906583962886286
+    second: TankWhite02_9
+  - first:
+      213: -530507745149565136
+    second: TankWhite02_10
+  - first:
+      213: 987185613678159287
+    second: TankWhite02_11
+  - first:
+      213: -7927149395564135802
+    second: TankWhite02_12
+  - first:
+      213: 8107293406038536558
+    second: TankWhite02_13
+  - first:
+      213: -6817268044106219061
+    second: TankWhite02_14
+  - first:
+      213: -4565139214628111896
+    second: TankWhite02_15
+  - first:
+      213: -2235623351211859051
+    second: TankWhite02_16
+  - first:
+      213: 5643588066974065635
+    second: TankWhite02_17
+  - first:
+      213: 3478188260728110042
+    second: TankWhite02_18
+  - first:
+      213: 3073160766184491139
+    second: TankWhite02_19
+  - first:
+      213: -5934525701422760627
+    second: TankWhite02_20
+  - first:
+      213: 1873415345537606862
+    second: TankWhite02_21
+  - first:
+      213: 3430664565333987649
+    second: TankWhite02_22
+  - first:
+      213: 2810496249459084668
+    second: TankWhite02_23
+  - first:
+      213: 4614384560092248867
+    second: TankWhite02_24
+  - first:
+      213: -7855684072488658641
+    second: TankWhite02_25
+  - first:
+      213: -1361394119775611590
+    second: TankWhite02_26
+  - first:
+      213: -7550850579113474797
+    second: TankWhite02_27
+  - first:
+      213: 2027091236621126413
+    second: TankWhite02_28
+  - first:
+      213: 1564385924776622533
+    second: TankWhite02_29
+  - first:
+      213: -1323923847858188306
+    second: TankWhite02_30
+  - first:
+      213: 1949266154553117167
+    second: TankWhite02_31
+  - first:
+      213: 3491288847639001003
+    second: TankWhite02_32
+  - first:
+      213: -4348124080980675466
+    second: TankWhite02_33
+  - first:
+      213: 4891466869450099467
+    second: TankWhite02_34
+  - first:
+      213: -3938183666163009041
+    second: TankWhite02_35
+  - first:
+      213: 3867394516475903099
+    second: TankWhite02_0
+  - first:
+      213: 1099932625097669393
+    second: TankWhite02_1
+  - first:
+      213: 6823316053951738849
+    second: TankWhite02_2
+  - first:
+      213: 7322838781518623788
+    second: TankWhite02_3
+  - first:
+      213: -1174947772872397664
+    second: TankWhite02_4
+  - first:
+      213: 507408051947565623
+    second: TankWhite02_5
+  - first:
+      213: 6408893008714899577
+    second: TankWhite02_6
+  - first:
+      213: -5981683073298695882
+    second: TankWhite02_7
+  - first:
+      213: -833698321478226240
+    second: TankWhite02_8
+  - first:
+      213: -4501473780184691968
+    second: TankWhite02_9
+  - first:
+      213: 2779092061727890394
+    second: TankWhite02_10
+  - first:
+      213: -320631809838816078
+    second: TankWhite02_11
+  - first:
+      213: 7162794232259705382
+    second: TankWhite02_12
+  - first:
+      213: 6156582738580956033
+    second: TankWhite02_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Frame1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfbe9c251f1390d0800000000000000
+      internalID: -3417353516440698935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 960
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa97c7c620ad145c0800000000000000
+      internalID: -4232862470806668886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0434fc8aaaa0be0f0800000000000000
+      internalID: -1086763156986969280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 800
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62d92265ff37f3a0800000000000000
+      internalID: -6631761603133320595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fccbdd0c6c88340800000000000000
+      internalID: 4866357929029979974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 640
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38066807c69b8be30800000000000000
+      internalID: 4519566101461753987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3799f86f5c2f978c0800000000000000
+      internalID: -4000899861882889869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1051981ec617790800000000000000
+      internalID: -7534120985690832458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 321
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df7f010d2847b680800000000000000
+      internalID: -8739437193760636971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80a28d7ecc042460800000000000000
+      internalID: 7215906583962886286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03744cb340243a8f0800000000000000
+      internalID: -530507745149565136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 163
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5a9a6d51033bd00800000000000000
+      internalID: 987185613678159287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a72f3ef9b1df190800000000000000
+      internalID: -7927149395564135802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankWhite02_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.34375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e613bc40664e28070800000000000000
+      internalID: 8107293406038536558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
