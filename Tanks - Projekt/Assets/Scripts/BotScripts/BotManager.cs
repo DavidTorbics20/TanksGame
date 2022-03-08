@@ -8,6 +8,8 @@ public class BotManager : MonoBehaviour
     private GameObject botInstance;
 
     public int maxBotsAlive;
+    [Range (0, 5)]
+    public float delayTime;
     public static int count;
 
     void Start()
@@ -22,7 +24,7 @@ public class BotManager : MonoBehaviour
 
     public IEnumerator SpawnBot()
     {
-        WaitForSeconds delay = new WaitForSeconds(2);
+        WaitForSeconds delay = new WaitForSeconds(delayTime);
 
         while (count <= maxBotsAlive)
         {

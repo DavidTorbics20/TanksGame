@@ -13,15 +13,11 @@ public class BotColors : MonoBehaviour
         float g = Random.Range(0f, 1f);
         float b = Random.Range(0f, 1f);
 
-        foreach (var item in botSprite)
-        {
-
-            item.color = new Color(r, g, b);
-        }
-        //botSprite[1].color = new Color(r, g, b);
-        //botSprite[2].color = new Color(r, g, b);
-        //botSprite[3].color = new Color(r, g, b);
-        //botSprite[4].color = new Color(r, g, b);
-        //botSprite[5].color = new Color(r, g, b);
+        botSprite[0].color = new Color(r - 0.1f, g - 0.1f, b - 0.1f);
+        botSprite[1].color = new Color(r + 0.06f, g + 0.06f, b + 0.06f);
+        botSprite[2].color = new Color(r + 0.06f, g + 0.06f, b + 0.06f);
+        botSprite[3].color = new Color(r, g, b);
+        botSprite[4].color = new Color(r - 0.1f, g - 0.1f, b - 0.1f);
+        botSprite[5].color = new Color(r, g, b);
     }
 }

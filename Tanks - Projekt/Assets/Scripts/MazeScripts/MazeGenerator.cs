@@ -11,15 +11,16 @@ public class MazeGenerator : MonoBehaviour
 
     public int sizeX, sizeY;
     public float generationStepDelay;
+    public float chance;
 
     void Start()
     {
         Invoke("GenerateGrid", 0.0f);
     }
 
-    public void GeneratePath() //alternativally i could use IEnumerator
+    public IEnumerator GeneratePath() //alternativally i could use IEnumerator
     {
-        //WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
+        WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
 
         //picks a cell to start at
         int rndX = Random.Range(1, sizeX);
@@ -46,7 +47,7 @@ public class MazeGenerator : MonoBehaviour
             nextCell.visited = true;
             nextCell.sprite.color = new Color(255, 0, 0);
             currentCell = nextCell;
-            //yield return delay;
+            yield return delay;
         } while (carvedCells.Count != 0);
     }
 
@@ -147,11 +148,44 @@ public class MazeGenerator : MonoBehaviour
         if (currentCell.x < nextCell.x){
             currentCell.right.SetActive(false);
         }if (currentCell.x > nextCell.x){
-            nextCell.right.SetActive(false); 
+            nextCell.right.SetActive(false);
         }if (currentCell.y < nextCell.y){
             currentCell.top.SetActive(false);
         }if (currentCell.y > nextCell.y){
             nextCell.top.SetActive(false);
+        }
+
+        float rnd = Random.Range(0, (sizeX + sizeY) / 2);
+        if (rnd <= chance)
+        {
+            int rnd2 = Random.Range(0, 4);
+            switch (rnd)
+            {
+                case 0:
+                    currentCell.right.SetActive(false);
+                    break;
+                case 1:
+                    nextCell.right.SetActive(false);
+                    break;
+                case 2:
+                    currentCell.top.SetActive(false);
+                    break;
+                case 3:
+                    nextCell.top.SetActive(false);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private bool EdgeCases()
+    {
+        if (true){
+            return false;
+        }
+        else{
+            return true;
         }
     }
 
@@ -165,8 +199,8 @@ public class MazeGenerator : MonoBehaviour
                 CreateCell(j, i);
             }
         }
-        //StartCoroutine(GeneratePath());
-        Invoke("GeneratePath", 0.1f);
+        StartCoroutine(GeneratePath());
+        //Invoke("GeneratePath", 0.1f);
     }
 
     private void CreateCell(int x, int y)

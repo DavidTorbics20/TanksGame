@@ -50,3 +50,4 @@ MonoBehaviour:
   sizeX: 10
   sizeY: 10
   generationStepDelay: 0
+  chance: 1
