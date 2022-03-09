@@ -436,12 +436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: b32251d8d5419c84bbf90305ebf3ea8f,
-        type: 3}
+      objectReference: {fileID: 3974410180043688788}
     - target: {fileID: 5670673398695362335, guid: e705bfb7250af3648b22468c4771e6fc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_name
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 5670673398695362335, guid: e705bfb7250af3648b22468c4771e6fc,
         type: 3}

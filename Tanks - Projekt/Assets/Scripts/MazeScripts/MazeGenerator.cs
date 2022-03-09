@@ -18,7 +18,7 @@ public class MazeGenerator : MonoBehaviour
         Invoke("GenerateGrid", 0.0f);
     }
 
-    public IEnumerator GeneratePath() //alternativally i could use IEnumerator
+    public void GeneratePath() //alternativally i could use IEnumerator
     {
         WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
 
@@ -47,7 +47,7 @@ public class MazeGenerator : MonoBehaviour
             nextCell.visited = true;
             nextCell.sprite.color = new Color(255, 0, 0);
             currentCell = nextCell;
-            yield return delay;
+            //yield return delay;
         } while (carvedCells.Count != 0);
     }
 
@@ -156,7 +156,7 @@ public class MazeGenerator : MonoBehaviour
         }
 
         float rnd = Random.Range(0, (sizeX + sizeY) / 2);
-        if (rnd <= chance)
+        if (rnd <= chance && EdgeCases(currentCell.x, currentCell.y, nextCell.x, nextCell.y))
         {
             int rnd2 = Random.Range(0, 4);
             switch (rnd)
@@ -179,9 +179,10 @@ public class MazeGenerator : MonoBehaviour
         }
     }
 
-    private bool EdgeCases()
+    private bool EdgeCases(int x, int y, int z, int a)
     {
-        if (true){
+        if (x == 0 || y == 0 || x == sizeX - 1 || y == sizeY - 1 || z == 0 || a == 0 || z == sizeX - 1 || a == sizeY - 1)
+        {
             return false;
         }
         else{
@@ -199,8 +200,8 @@ public class MazeGenerator : MonoBehaviour
                 CreateCell(j, i);
             }
         }
-        StartCoroutine(GeneratePath());
-        //Invoke("GeneratePath", 0.1f);
+        //StartCoroutine(GeneratePath());
+        Invoke("GeneratePath", 0.1f);
     }
 
     private void CreateCell(int x, int y)

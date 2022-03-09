@@ -55,10 +55,10 @@ public class BotMovement : MonoBehaviour
                 bot.transform.position = new Vector2(x, -8);
                 break;
             case 2:
-                bot.transform.position = new Vector2(9, y);
+                bot.transform.position = new Vector2(10, y);
                 break;
             case 3:
-                bot.transform.position = new Vector2(-9, y);
+                bot.transform.position = new Vector2(-10, y);
                 break;
             default:
                 break;
