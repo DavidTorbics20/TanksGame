@@ -8,11 +8,10 @@ public class SceneTransition : MonoBehaviour
     public Animator transition;
     public float delay = 4f;
 
-
     public void LoadScene(string sceneName)
     {
-        Debug.Log("Active Self: " + this.gameObject.activeSelf);
-        Debug.Log("Active in Hierarchy" + this.gameObject.activeInHierarchy);
+        //Debug.Log("Active Self: " + this.gameObject.activeSelf);
+        //Debug.Log("Active in Hierarchy" + this.gameObject.activeInHierarchy);
         StartCoroutine(LoadLevel(sceneName));
     }
 

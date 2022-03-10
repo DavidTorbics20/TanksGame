@@ -66,3 +66,26 @@ _When the player exists a scene:_
 
 _when the player enters a scene:_
 ![scene start](./pics/Scene_Transition_Start.PNG)
+
+## __10.03.2022 - Local Game - __
+
+I started working on the local game. When the player joins on the "Local Game" button in the main menu he/she will be sent to the LocalGame scene. Then a table will show up in which the last 10 or so game will be displayed with the players that played that game and their points. Below that two input fields for the player names and a Next button. The Next button leads to the actual game. The same maze that is was already mentioned before will be generated here as well. 
+
+## - How To Play - 
+
+Here you can scroll through some pages and view what the game has to offer and how it works. First the basic stuff like movement, score and items. Next the extra stuff for the local game and after tha for the online game. 
+
+My idea of visualising this  page would look something like this:
+
+    (button left - previous) (content - the information) (button right - next)
+
+    (# --- # --- # --- # --- tank sprite --- # --- # --- # --- # --- # --- #) 
+
+where the --- represent a path and the # a stop where information will be shown.
+
+# idea for the local game
+before starting the players get to choose names
+
+these names will then be saved in localgames.db 
+
+at the same time the previously played games will be displayed with tha 5 latest games: with it the names of the players and sroce as well 

@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 2047453716}
-  delay: 4
+  delay: 3
 --- !u!1 &3974410179446069393
 GameObject:
   m_ObjectHideFlags: 0

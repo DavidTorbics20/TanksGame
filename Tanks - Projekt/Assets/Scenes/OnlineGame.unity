@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1408032211}
-  delay: 4
+  delay: 3
 --- !u!4 &3974410180216854374
 Transform:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class MazeGenerator : MonoBehaviour
         Invoke("GenerateGrid", 0.0f);
     }
 
-    public void GeneratePath() //alternativally i could use IEnumerator
+    public IEnumerator GeneratePath() //alternativally i could use IEnumerator
     {
         WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
 
@@ -47,8 +47,10 @@ public class MazeGenerator : MonoBehaviour
             nextCell.visited = true;
             nextCell.sprite.color = new Color(255, 0, 0);
             currentCell = nextCell;
-            //yield return delay;
+            yield return delay;
         } while (carvedCells.Count != 0);
+
+        ClearColors();
     }
 
     private MazeCell EnumerateNeighbours(MazeCell currentCell)
@@ -190,6 +192,14 @@ public class MazeGenerator : MonoBehaviour
         }
     }
 
+    private void ClearColors()
+    {
+        foreach (var item in cells)
+        {
+            item.sprite.color = new Color(1f, 1f, 1f);
+        }
+    }
+
     public void GenerateGrid()
     {
         cells = new MazeCell[sizeX, sizeY];
@@ -200,8 +210,8 @@ public class MazeGenerator : MonoBehaviour
                 CreateCell(j, i);
             }
         }
-        //StartCoroutine(GeneratePath());
-        Invoke("GeneratePath", 0.1f);
+        StartCoroutine(GeneratePath());
+        //Invoke("GeneratePath", 0.1f);
     }
 
     private void CreateCell(int x, int y)
