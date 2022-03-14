@@ -4,7 +4,10 @@ This repository will contain all the files connected to my project, Tanks.
 
 ## __Description:__
 
+The project started on 1.3.2022 and I work with the 2019.4.4f1 version von Unity.  
+
 The game will consist of two gamemodes. First, a local one vs one. Second an online PvP with up to 10 players. In each of these a maze will be generated in which the players are spread out randomly. The players than have to navigate through the maze and shoot each other. The last man standing wins.
+
 
 ## __Progress__
 
