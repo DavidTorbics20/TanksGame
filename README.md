@@ -70,7 +70,7 @@ _When the player exists a scene:_
 _when the player enters a scene:_
 ![scene start](./pics/Scene_Transition_Start.PNG)
 
-## __10.03.2022 - Local Game -__
+## __XX.03.2022 - Local Game -__
 
 I started working on the local game. When the player joins on the "Local Game" button in the main menu he/she will be sent to the LocalGame scene. Then a table will show up in which the last 10 or so game will be displayed with the players that played that game and their points. Below that two input fields for the player names and a Next button. The Next button leads to the actual game. The same maze that was already mentioned before will be generated here as well. 
 
