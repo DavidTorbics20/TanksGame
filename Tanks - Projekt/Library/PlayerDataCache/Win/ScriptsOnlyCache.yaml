@@ -4,9 +4,12 @@ ScriptsOnlyBuild:
     - BotColors
     - BotManager
     - BotMovement
+    - LocalGameCanvasController
+    - LocalGameManager
     - MazeCell
     - MazeGenerator
     - MazeManager
+    - PlayerNameManager
     - SceneTransition
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -28,10 +31,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -44,6 +45,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Account.unity:
@@ -70,21 +72,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11186}
-    - Class: 114
       Script: {instanceID: 11188}
     - Class: 114
       Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 14116}
+    - Class: 114
+      Script: {instanceID: 14862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -125,21 +127,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11186}
-    - Class: 114
       Script: {instanceID: 11188}
     - Class: 114
       Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 12774}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 13224}
+    - Class: 114
+      Script: {instanceID: 13270}
+    - Class: 114
+      Script: {instanceID: 13556}
+    - Class: 114
+      Script: {instanceID: 13668}
+    - Class: 114
+      Script: {instanceID: 14116}
+    - Class: 114
+      Script: {instanceID: 14862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -190,35 +200,35 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11186}
-    - Class: 114
       Script: {instanceID: 11188}
     - Class: 114
       Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11868}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11872}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 11884}
     - Class: 114
-      Script: {instanceID: 12452}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 12456}
     - Class: 114
-      Script: {instanceID: 13582}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 13610}
+      Script: {instanceID: 13590}
     - Class: 114
-      Script: {instanceID: 13628}
+      Script: {instanceID: 13618}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 13636}
     - Class: 114
-      Script: {instanceID: 14446}
+      Script: {instanceID: 14116}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 14458}
+    - Class: 114
+      Script: {instanceID: 14862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -261,27 +271,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11186}
-    - Class: 114
       Script: {instanceID: 11188}
     - Class: 114
       Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 12956}
+      Script: {instanceID: 12562}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 13836}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 13846}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 14116}
+    - Class: 114
+      Script: {instanceID: 14862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -324,21 +334,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11186}
-    - Class: 114
       Script: {instanceID: 11188}
     - Class: 114
       Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 14116}
+    - Class: 114
+      Script: {instanceID: 14862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -379,21 +389,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11186}
-    - Class: 114
       Script: {instanceID: 11188}
     - Class: 114
       Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 14106}
+      Script: {instanceID: 13270}
     - Class: 114
-      Script: {instanceID: 14850}
+      Script: {instanceID: 14116}
+    - Class: 114
+      Script: {instanceID: 14862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -579,6 +589,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleMatch
     className: MatchController
+  - hash:
+      serializedVersion: 2
+      Hash: 392252fbebebf0fa6e050908d6fea03f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanvasController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -851,6 +867,12 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
+      Hash: 298fe32322f3d4bf4def1452567212b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocalGameCanvasController
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -933,6 +955,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocalGameManager
   - hash:
       serializedVersion: 2
       Hash: ff4753395d726a7aadce9c48dcaf99d6
@@ -1085,6 +1113,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 6c900723cc6763cc8b727ec28c21685b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerNameManager
+  - hash:
+      serializedVersion: 2
       Hash: f3a8ccc18ad656ac8993b34a1b30984f
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -1221,6 +1255,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror.Discovery
     className: NetworkDiscoveryHUD
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanvasManager
   - hash:
       serializedVersion: 2
       Hash: 051520dae738041bd35e209bbe5954b6
@@ -1416,4 +1456,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/OnlineGame.unity
   - Assets/Scenes/OnlineWaitingRoom.unity
   playerPath: C:/Users/torbi/source/repos/PersonalRepos/TanksGame/Tanks - Projekt/Builds/Tanks
-    0.1.5.1/Tanks.exe
+    0.2.1/Tanks.exe

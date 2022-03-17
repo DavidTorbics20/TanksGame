@@ -13,8 +13,8 @@ The game will consist of two gamemodes. First, a local one vs one. Second an onl
 
 Here are some rules I will apply to the Builds:
 
-- XX.0.0. -> means something big happened like for example a new gamemode has been added
-- 0.XX.0. -> new things added to the game but not gamebreaking, for example new animations
+- XX.0.0. -> means something big happened like for example a new gamemode has been added or a playable version is created
+- 0.XX.0. -> new things added to the game but not gamebreaking, for example new animations or not fully playable builds
 - 0.0.XX. -> just some minor changes like bug fixes
 
 Not all updates will be mentioned because they only exist for testing purpose and are insignificant otherwise. Only the complete version of an update will be noted. The version not mentioned here are still playable in the ./Tanks - Projekt/Builds/ folder. 
@@ -78,11 +78,9 @@ I started working on the local game. When the player joins on the "Local Game" b
 
 The first canvas the player sees is the PreGameCanvas that holds the score table ans is responsible for the player name input. 
 
-![local game objects](./pics/LocalGameSceneObjects.PNG)
+![local game objects](./pics/LocalGameSceneObjects.PNG) ![player name handler](./pics/PlayerNameManager.PNG)
 
-align the script to be next to the list
-
-![player name handler](./pics/PlayerNameManager.PNG)
+In version 0.2.1 the player name input system is working. You can enter a name end it will show in the game canvas. 
 
 ### Game
 

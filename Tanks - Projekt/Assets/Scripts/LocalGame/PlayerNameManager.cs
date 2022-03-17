@@ -19,7 +19,7 @@ public class PlayerNameManager : MonoBehaviour
         loadName[1].text = playerName[1];
     }
 
-    public void SaveName01()
+    public void SaveNames()
     {
         saveName[0] = inputText[0].text;
         PlayerPrefs.SetString("name1", saveName[0]);
