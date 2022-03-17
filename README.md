@@ -17,7 +17,7 @@ Here are some rules I will apply to the Builds:
 - 0.XX.0. -> new things added to the game but not gamebreaking, for example new animations
 - 0.0.XX. -> just some minor changes like bug fixes
 
-Not all updates will be mentioned because they only exist for testing purpose and are insignificant otherwise. Only the complete version of an update will be noted. 
+Not all updates will be mentioned because they only exist for testing purpose and are insignificant otherwise. Only the complete version of an update will be noted. The version not mentioned here are still playable in the ./Tanks - Projekt/Builds/ folder. 
 
 ## __02.03.2022 - The Beginning__
 
@@ -70,9 +70,21 @@ _When the player exists a scene:_
 _when the player enters a scene:_
 ![scene start](./pics/Scene_Transition_Start.PNG)
 
-## __10.03.2022 - Local Game - __
+## __10.03.2022 - Local Game -__
 
-I started working on the local game. When the player joins on the "Local Game" button in the main menu he/she will be sent to the LocalGame scene. Then a table will show up in which the last 10 or so game will be displayed with the players that played that game and their points. Below that two input fields for the player names and a Next button. The Next button leads to the actual game. The same maze that is was already mentioned before will be generated here as well. 
+I started working on the local game. When the player joins on the "Local Game" button in the main menu he/she will be sent to the LocalGame scene. Then a table will show up in which the last 10 or so game will be displayed with the players that played that game and their points. Below that two input fields for the player names and a Next button. The Next button leads to the actual game. The same maze that was already mentioned before will be generated here as well. 
+
+### __Pregame Menu__
+
+The first canvas the player sees is the PreGameCanvas that holds the score table ans is responsible for the player name input. 
+
+![local game objects](./pics/LocalGameSceneObjects.PNG)
+
+align the script to be next to the list
+
+![player name handler](./pics/PlayerNameManager.PNG)
+
+### Game
 
 ## - How To Play - 
 
@@ -86,9 +98,25 @@ My idea of visualising this  page would look something like this:
 
 where the --- represent a path and the # a stop where information will be shown.
 
-# idea for the local game
+# ideas for the future 
+## local game
 before starting the players get to choose names
 
 these names will then be saved in localgames.db 
 
 at the same time the previously played games will be displayed with tha 5 latest games: with it the names of the players and sroce as well 
+
+## overall 
+
+so to make the game more exciting i will ad a "lucky box" where you can get new weapons from. for example instead of shooting a regular shot you shoot 4 slighly smaller bullets aka a shotgun.
+so on and so forth. i will still collet ideas but for now its just important to remember this
+
+Weapons ideas:
+
+- shotgun 
+- laserbeam 
+- item that makes you invulnerable for 1 second
+- rapid fire (10 - 15 really small bullets)
+- landmine 
+- shrapnell bullet
+- heavyshot 
