@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LocalGameCanvasController : MonoBehaviour
 {
+    public GameObject pauseMenuCanvas;
     public GameObject Canvas1;
     public GameObject Canvas2;
 
@@ -13,15 +15,32 @@ public class LocalGameCanvasController : MonoBehaviour
     public Text warningOne;
     public Text warningTwo;
 
-    void Start()
+    public Animator animation;
+
+    private bool gameIsPaused = false;
+
+    public void Start()
     {
         Canvas1.SetActive(true);
         Canvas2.SetActive(false);
+        pauseMenuCanvas.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameIsPaused)
+        {
+            Pause();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && gameIsPaused)
+        {
+            Resume();
+        }
     }
 
     public void SwitchCavas()
     {
-        //Simulate an event the canvas needs to be switched
+        //looks if name-input-field is empty / if not start game 
         if (!string.IsNullOrEmpty(inputOne.text) && !string.IsNullOrEmpty(inputTwo.text))
         {
             Canvas1.SetActive(!Canvas1.activeSelf);
@@ -43,5 +62,20 @@ public class LocalGameCanvasController : MonoBehaviour
         }else{
             warningTwo.gameObject.SetActive(false);
         }
+    }
+
+    public void Pause()
+    {
+        animation.Play("PauseMenuStart");
+        pauseMenuCanvas.SetActive(true);
+        //Time.timeScale = 0f;
+        gameIsPaused = true;
+    }
+
+    public void Resume()
+    {
+        pauseMenuCanvas.SetActive(false);
+        //Time.timeScale = 1f;
+        gameIsPaused = false;
     }
 }

@@ -1456,4 +1456,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/OnlineGame.unity
   - Assets/Scenes/OnlineWaitingRoom.unity
   playerPath: C:/Users/torbi/source/repos/PersonalRepos/TanksGame/Tanks - Projekt/Builds/Tanks
-    0.2.1/Tanks.exe
+    0.2.2/Tanks.exe

@@ -19,13 +19,15 @@ Here are some rules I will apply to the Builds:
 
 Not all updates will be mentioned because they only exist for testing purpose and are insignificant otherwise. Only the complete version of an update will be noted. The version not mentioned here are still playable in the ./Tanks - Projekt/Builds/ folder. 
 
-## __02.03.2022 - The Beginning__
+The title are as follows: | Date of the start | Activity | The final version of the activity |
+
+## __01.03.2022 - The Beginning__
 
 I started with setting up the environment in Unity.
 Also tried to make the first steps towards the maze generation. 
 I decided on the recursive implementation but will change the way it works later on.
 
-## __04.03.2022 - Maze Generation - 0.0.1__
+## __02.03.2022 - Maze Generation - 0.0.1__
 
 # describe how the generator works in detail 
 
@@ -46,7 +48,7 @@ _This is what a finished maze should look like:_
 
 ![finished maze](./pics/Solved_Maze_Finished.PNG)
 
-## __06.03.2022 - Main Menu - 0.1.1__
+## __04.03.2022 - Main Menu - 0.1.1__
 
 The main menu consists of a big title and some buttons, for now. To make it a bit more interessting I added bots that drive around in the background. They spawn outside of the field of view of the camera and start moving in one direction. not far from this zone is a death zone where these bots are destroyed to save resources. 
 
@@ -60,7 +62,7 @@ SpriteRendere[] botSprite; refers to the different section of each bot.
 
 The body of the tank is completelly white and the different sections like the barrel or the main body are separated into 6 pieces. Like this I can color each of the 6 sprites indevidually to give the bots some perosnality.
 
-## __08.03.2022 - Scene Transitions - 0.1.5.1__
+## __07.03.2022 - Scene Transitions - 0.1.5.1__
 
 So to make the pace of the game smoother I made a little animation between scenes. A wall of sprites just like the player itself moves from left to right and leaves a dark background behind it. This indicates the end of a scene. At the start almost the same thing happens just with the dark screen going first and the wall of tanks after it.
 
@@ -70,7 +72,7 @@ _When the player exists a scene:_
 _when the player enters a scene:_
 ![scene start](./pics/Scene_Transition_Start.PNG)
 
-## __XX.03.2022 - Local Game -__
+## __11.03.2022 - Local Game -__
 
 I started working on the local game. When the player joins on the "Local Game" button in the main menu he/she will be sent to the LocalGame scene. Then a table will show up in which the last 10 or so game will be displayed with the players that played that game and their points. Below that two input fields for the player names and a Next button. The Next button leads to the actual game. The same maze that was already mentioned before will be generated here as well. 
 
@@ -80,9 +82,11 @@ The first canvas the player sees is the PreGameCanvas that holds the score table
 
 ![local game objects](./pics/LocalGameSceneObjects.PNG) ![player name handler](./pics/PlayerNameManager.PNG)
 
-In version 0.2.1 the player name input system is working. You can enter a name end it will show in the game canvas. 
+In version _0.2.1_ the player name input system is working. You can enter a name end it will show in the game canvas. Version _0.2.2_ fixed a problem with the fonts where everything was 100% black. In _0.2.3_ an exit button was added and the pause menu is woeking. Now I have to write the script to save the games. 
 
-### Game
+### __Game__
+
+In the game a random size (5 - 10) field will be created. There I will have to somehow spawn the players on random locatios. which shouldn't be too hard ich I pick random cells and copy their coordinates. 
 
 ## - How To Play - 
 
@@ -97,14 +101,14 @@ My idea of visualising this  page would look something like this:
 where the --- represent a path and the # a stop where information will be shown.
 
 # ideas for the future 
-## local game
-before starting the players get to choose names
 
-these names will then be saved in localgames.db 
+## local game
+
+These names will then be saved in localgames.db 
 
 at the same time the previously played games will be displayed with tha 5 latest games: with it the names of the players and sroce as well 
 
-## overall 
+## local and online game
 
 so to make the game more exciting i will ad a "lucky box" where you can get new weapons from. for example instead of shooting a regular shot you shoot 4 slighly smaller bullets aka a shotgun.
 so on and so forth. i will still collet ideas but for now its just important to remember this

@@ -23,7 +23,6 @@ public class PlayerNameManager : MonoBehaviour
     {
         saveName[0] = inputText[0].text;
         PlayerPrefs.SetString("name1", saveName[0]);
-
         saveName[1] = inputText[1].text;
         PlayerPrefs.SetString("name2", saveName[1]);
     }
