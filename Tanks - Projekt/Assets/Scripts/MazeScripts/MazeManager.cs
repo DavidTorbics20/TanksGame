@@ -7,7 +7,7 @@ public class MazeManager : MonoBehaviour
     public MazeGenerator mazePrefab;
     private MazeGenerator mazeInstance;
 
-    void Start()
+    public void StartGenerating()
     {
         Begin();
     }

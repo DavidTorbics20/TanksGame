@@ -78,15 +78,17 @@ I started working on the local game. When the player joins on the "Local Game" b
 
 ### __Pregame Menu__
 
-The first canvas the player sees is the PreGameCanvas that holds the score table ans is responsible for the player name input. 
+The first canvas the player sees is the PreGameCanvas that holds the score table ans is responsible for the player name input. The name can not be longer than 10 characters. 
 
 ![local game objects](./pics/LocalGameSceneObjects.PNG) ![player name handler](./pics/PlayerNameManager.PNG)
 
 In version _0.2.1_ the player name input system is working. You can enter a name end it will show in the game canvas. Version _0.2.2_ fixed a problem with the fonts where everything was 100% black. In _0.2.3_ an exit button was added and the pause menu is woeking. Now I have to write the script to save the games. 
 
+To make the game more colorful the player can choose a color for its tank right above the name input field. These changes will appear in version 0.3.1. The Sprite the player chooses here will be translated to the GameCanvas and implemented as a spinning object to distinguish the players not only by name but alos by color.
+
 ### __Game__
 
-In the game a random size (5 - 10) field will be created. There I will have to somehow spawn the players on random locatios. which shouldn't be too hard ich I pick random cells and copy their coordinates. 
+In the game a 10 by 10 field will be created. There I will have to  spawn the players on random locatios. The player movement is pretty simple with the players beeing able to move back and forth and rotate around themselves. Also the player can shoot a bullet which is still a little buggy because it just pushes everything aroung and doesn't get destroyed when colliding with a player. These changes are visible mainly in the version 0.4.1. In 0.4.2 I will try to fix this issu,  polish the player. By 0.4.3 the score counter will be functioning as it is supposed to.
 
 ## - How To Play - 
 
