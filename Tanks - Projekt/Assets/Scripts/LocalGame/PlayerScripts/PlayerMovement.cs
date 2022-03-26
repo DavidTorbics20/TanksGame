@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public static bool nextRoundB;
 
+    public PlayerSpawner playerSpawner;
     public GameObject bullet;
     public GameObject bulletStart;
     public Rigidbody2D rb;
@@ -14,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
     public float rotatSpeed = 180.0f;
     private float timeBTWAtatck;
     public float startTimeBTWAttack = 2.0f;
-
-    float x;
 
     void Update()
     {
@@ -52,16 +51,16 @@ public class PlayerMovement : MonoBehaviour
         {
             timeBTWAtatck -= Time.deltaTime;
         }
+    }
 
-        void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        //when player dies make its model explode and not destroy the gameobject
+    
+        if (col.gameObject.tag == "Bullet")
         {
-            if (col.gameObject.tag == "Bullet")
-            {
-                nextRoundB = true;
-                Destroy(col.gameObject);
-                gameObject.SetActive(false);
-                PlayerOneScore.scoreValue += 1;
-            }
+            nextRoundB = true;
+            PlayerTwoScore.scoreValue += 1;
         }
     }
 }
