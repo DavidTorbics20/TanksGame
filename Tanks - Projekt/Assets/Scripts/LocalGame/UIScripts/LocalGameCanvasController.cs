@@ -9,6 +9,7 @@ public class LocalGameCanvasController : MonoBehaviour
     private MazeManager mazeManager;
     public PlayerSpawner playerSpawner;
 
+    private GameObject maze;
     public GameObject pauseMenuCanvas;
     public GameObject Canvas1;
     public GameObject Canvas2;
@@ -77,6 +78,20 @@ public class LocalGameCanvasController : MonoBehaviour
             mazeManager.StartGenerating();
             playerSpawner.SpawnPlayers();
         }
+    }
+
+    public void NewGameButtonEvent()
+    {
+        maze = GameObject.Find("Maze(Clone)");
+        if (maze.name == "Maze(Clone)");
+        {
+            Debug.Log("bruh");
+        }
+        Destroy(maze);
+
+        Canvas1.SetActive(true);
+        Canvas2.SetActive(false);
+        pauseMenuCanvas.SetActive(false);
     }
 
     public void Pause()

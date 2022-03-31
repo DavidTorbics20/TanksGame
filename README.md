@@ -74,9 +74,9 @@ _when the player enters a scene:_
 
 ## __11.03.2022 - Local Game -__
 
-I started working on the local game. When the player joins on the "Local Game" button in the main menu he/she will be sent to the LocalGame scene. Then a table will show up in which the last 10 or so game will be displayed with the players that played that game and their points. Below that two input fields for the player names and a Next button. The Next button leads to the actual game. The same maze that was already mentioned before will be generated here as well. 
+I started working on the local game. When the player joins on the "Local Game" button in the main menu he/she will be sent to the LocalGameLobby scene. Then a table will show up in which the last 10 or so game will be displayed with the players that played that game and their points. Below that two input fields for the player names and a Next button. The Next button leads to the actual game. The same maze that was already mentioned before will be generated here as well. 
 
-### __Pregame Menu__
+### 12.03.2022 __Pregame Menu__
 
 The first canvas the player sees is the PreGameCanvas that holds the score table ans is responsible for the player name input. The name can not be longer than 10 characters. 
 
@@ -86,11 +86,15 @@ In version _0.2.1_ the player name input system is working. You can enter a name
 
 To make the game more colorful the player can choose a color for its tank right above the name input field. These changes will appear in version 0.3.1. The Sprite the player chooses here will be translated to the GameCanvas and implemented as a spinning object to distinguish the players not only by name but alos by color.
 
-### __Game__
+### 16.03.2022 __Game__
 
 In the game a 10 by 10 field will be created. There I will have to  spawn the players on random locatios. The player movement is pretty simple with the players beeing able to move back and forth and rotate around themselves. Also the player can shoot a bullet which is still a little buggy because it just pushes everything aroung and doesn't get destroyed when colliding with a player. These changes are visible mainly in the version _0.4.1_. 
 
 In _0.4.2_ the player can move around and shoot the enemy. After a hit he/she gets +1 to the score. After that the players are relocated and the "round" starts again. There are some things that have to be fixed like for example the player should not jitter when colliding with a wall, the bullet should despawn after the round and an animation has to be added when the round ends and maybe an explosion animation right at the score when the it increases and after the explosion the new score will be revealed.
+
+_0.4.3_ hopefully fixed the but with the bullet acting not apropriatelly. Now it should not push away players. Update: it's not.
+
+Also maybe I should put the "pregame menu" and "game" in differnt scenes to make the maze generation and animations easier.
 
 ## - How To Play - 
 

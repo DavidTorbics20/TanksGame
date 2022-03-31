@@ -41,7 +41,7 @@ public class PlayerTwoMovement : MonoBehaviour
 
         if (timeBTWAtatck <= 0)
         {
-            if (Input.GetKey("m"))
+            if (Input.GetKey(KeyCode.Keypad0))
             {
                 Instantiate(bullet, bulletStart.transform.position, bulletStart.transform.rotation);
                 timeBTWAtatck = startTimeBTWAttack;
@@ -53,13 +53,13 @@ public class PlayerTwoMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        //when player dies make its model explode and not destroy the gameobject
-    
-        if (col.gameObject.tag == "Bullet")
-        {
-            PlayerOneScore.scoreValue += 1;
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D col)
+    //{
+    //    //when player dies make its model explode and not destroy the gameobject
+    //
+    //    if (col.gameObject.tag == "Bullet")
+    //    {
+    //        PlayerOneScore.scoreValue += 1;
+    //    }
+    //}
 }
