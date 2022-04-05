@@ -8,17 +8,14 @@ public class PlayerSpriteChooser : MonoBehaviour
 {
     Image image;
 
-    public Image gameImage;
-    public SpriteRenderer playerSprite;
     public Sprite[] sprites;
     private int playerSpriteCount = 0;
+    private int playerSpriteCount2 = 0;
 
     void Start()
     {
         image = GetComponent<Image>();
         image.sprite = sprites[playerSpriteCount];
-        gameImage.sprite = sprites[playerSpriteCount];
-        playerSprite.sprite = sprites[playerSpriteCount];
     }
 
     public void ChooseLeft()
@@ -27,23 +24,18 @@ public class PlayerSpriteChooser : MonoBehaviour
         if (playerSpriteCount <= 0)
         {
             image.sprite = sprites[sprites.Length - 1];
-            gameImage.sprite = sprites[sprites.Length - 1];
-            playerSprite.sprite = sprites[sprites.Length - 1];
             playerSpriteCount = sprites.Length - 1;
         }
         else if (playerSpriteCount >= sprites.Length)
         {
             image.sprite = sprites[0];
-            gameImage.sprite = sprites[0];
-            playerSprite.sprite = sprites[0];
             playerSpriteCount = 0;
         }
         else 
         {
             image.sprite = sprites[playerSpriteCount];
-            gameImage.sprite = sprites[playerSpriteCount];
-            playerSprite.sprite = sprites[playerSpriteCount];
         }
+        SaveSprites();
     }
 
     public void ChooseRight()
@@ -52,24 +44,66 @@ public class PlayerSpriteChooser : MonoBehaviour
         if (playerSpriteCount <= 0)
         {
             image.sprite = sprites[sprites.Length - 1];
-            gameImage.sprite = sprites[sprites.Length - 1];
-            playerSprite.sprite = sprites[sprites.Length - 1];
             playerSpriteCount = sprites.Length - 1;
         }
         else if (playerSpriteCount >= sprites.Length)
         {
             image.sprite = sprites[0];
-            gameImage.sprite = sprites[0];
-            playerSprite.sprite = sprites[0];
             playerSpriteCount = 0;
         }
         else
         {
             image.sprite = sprites[playerSpriteCount];
-            gameImage.sprite = sprites[playerSpriteCount];
-            playerSprite.sprite = sprites[playerSpriteCount];
         }
+        SaveSprites();
     }
 
+    public void ChooseLeft2()
+    {
+        playerSpriteCount2 -= 1;
+        if (playerSpriteCount2 <= 0)
+        {
+            image.sprite = sprites[sprites.Length - 1];
+            playerSpriteCount2 = sprites.Length - 1;
+        }
+        else if (playerSpriteCount2 >= sprites.Length)
+        {
+            image.sprite = sprites[0];
+            playerSpriteCount2 = 0;
+        }
+        else
+        {
+            image.sprite = sprites[playerSpriteCount2];
+        }
+        SaveSprites();
+    }
 
+    public void ChooseRight2()
+    {
+        playerSpriteCount2 += 1;
+        if (playerSpriteCount2 <= 0)
+        {
+            image.sprite = sprites[sprites.Length - 1];
+            playerSpriteCount2 = sprites.Length - 1;
+        }
+        else if (playerSpriteCount2 >= sprites.Length)
+        {
+            image.sprite = sprites[0];
+            playerSpriteCount2 = 0;
+        }
+        else
+        {
+            image.sprite = sprites[playerSpriteCount2];
+        }
+        SaveSprites();
+    }
+
+    public void SaveSprites()
+    {
+        PlayerPrefs.DeleteKey("playerOneSprite");
+        PlayerPrefs.SetInt("playerOneSprite", playerSpriteCount);
+        PlayerPrefs.DeleteKey("playerTwoSprite");
+        PlayerPrefs.SetInt("playerTwoSprite", playerSpriteCount2);
+        PlayerPrefs.Save();
+    }
 }

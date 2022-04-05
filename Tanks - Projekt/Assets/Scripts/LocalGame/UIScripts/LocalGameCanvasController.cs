@@ -6,42 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class LocalGameCanvasController : MonoBehaviour
 {
-    private MazeManager mazeManager;
-    public PlayerSpawner playerSpawner;
-
-    private GameObject maze;
-    public GameObject pauseMenuCanvas;
+    public SceneTransition sceneTransition; 
     public GameObject Canvas1;
-    public GameObject Canvas2;
 
     public Text inputOne;
     public Text inputTwo;
     public Text warningOne;
     public Text warningTwo;
 
-    public Animator animation;
 
     private bool gameIsPaused = false;
 
     public void Start()
     {
-        mazeManager = GetComponent<MazeManager>();
-
         Canvas1.SetActive(true);
-        Canvas2.SetActive(false);
-        pauseMenuCanvas.SetActive(false);
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && !gameIsPaused)
-        {
-            Pause();
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && gameIsPaused)
-        {
-            Resume();
-        }
     }
 
     public void SwitchCavas()
@@ -49,8 +27,6 @@ public class LocalGameCanvasController : MonoBehaviour
         //looks if name-input-field is empty / if not start game 
         if (!string.IsNullOrEmpty(inputOne.text) && !string.IsNullOrEmpty(inputTwo.text))
         {
-            Canvas1.SetActive(!Canvas1.activeSelf);
-            Canvas2.SetActive(!Canvas2.activeSelf);
             warningOne.gameObject.SetActive(false);
             warningTwo.gameObject.SetActive(false);
         }
@@ -75,37 +51,7 @@ public class LocalGameCanvasController : MonoBehaviour
 
         if (succ)
         {
-            mazeManager.StartGenerating();
-            playerSpawner.SpawnPlayers();
+            sceneTransition.LoadScene("LocalGame");
         }
-    }
-
-    public void NewGameButtonEvent()
-    {
-        maze = GameObject.Find("Maze(Clone)");
-        if (maze.name == "Maze(Clone)");
-        {
-            Debug.Log("bruh");
-        }
-        Destroy(maze);
-
-        Canvas1.SetActive(true);
-        Canvas2.SetActive(false);
-        pauseMenuCanvas.SetActive(false);
-    }
-
-    public void Pause()
-    {
-        animation.Play("PauseMenuStart");
-        pauseMenuCanvas.SetActive(true);
-        //Time.timeScale = 0f;
-        gameIsPaused = true;
-    }
-
-    public void Resume()
-    {
-        pauseMenuCanvas.SetActive(false);
-        //Time.timeScale = 1f;
-        gameIsPaused = false;
     }
 }

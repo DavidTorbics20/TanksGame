@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class MazeManager : MonoBehaviour
 {
+    public SceneTransition sceneTransition;
     public MazeGenerator mazePrefab;
     private MazeGenerator mazeInstance;
 
-    public void StartGenerating()
+    public static bool nextRound;
+
+    void Start()
     {
         Begin();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || nextRound)
         {
-            Restart();
+            sceneTransition.LoadScene("LocalGame");
         }
+        nextRound = false;
     }
 
     private void Begin()

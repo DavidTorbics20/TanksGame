@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerTwoMovement : MonoBehaviour
 {
-    public static bool nextRoundB;
-
     public PlayerSpawner playerSpawner;
     public GameObject bullet;
     public GameObject bulletStart;
@@ -52,14 +50,16 @@ public class PlayerTwoMovement : MonoBehaviour
             timeBTWAtatck -= Time.deltaTime;
         }
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        //when player dies make its model explode and not destroy the gameobject
 
-    //void OnCollisionEnter2D(Collision2D col)
-    //{
-    //    //when player dies make its model explode and not destroy the gameobject
-    //
-    //    if (col.gameObject.tag == "Bullet")
-    //    {
-    //        PlayerOneScore.scoreValue += 1;
-    //    }
-    //}
+        if (col.gameObject.tag == "Bullet")
+        {
+            Destroy(this.gameObject);
+            Destroy(col.gameObject);
+            MazeManager.nextRound = true;
+            PlayerOneScore.scoreValue += 1;
+        }
+    }
 }

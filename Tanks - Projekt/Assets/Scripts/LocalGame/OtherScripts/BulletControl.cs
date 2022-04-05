@@ -20,14 +20,14 @@ public class BulletControl : MonoBehaviour
         Destroy(gameObject, bulletLifetime);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            Debug.Log("hit");
-            Destroy(this.gameObject);
-            col.gameObject.SetActive(false);
-            PlayerSpawner.shouldSpawn = true;
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    if (col.gameObject.tag == "Player")
+    //    {
+    //        Debug.Log("hit");
+    //        Destroy(this.gameObject);
+    //        col.gameObject.SetActive(false);
+    //        PlayerSpawner.shouldSpawn = true;
+    //    }
+    //}
 }

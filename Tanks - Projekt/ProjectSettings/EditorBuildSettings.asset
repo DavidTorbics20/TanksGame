@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OnlineWaitingRoom.unity
     guid: 45ae713edb41681439fd5489215f73bd
+  - enabled: 1
+    path: Assets/Scenes/LocalGame.unity
+    guid: ac20e1e2a0a82bd4f996c0a8e91b2f53
   m_configObjects: {}
