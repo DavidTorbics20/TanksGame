@@ -19,15 +19,4 @@ public class BulletControl : MonoBehaviour
         rb.AddForce(transform.up * bulletSpeed * 100 * Time.deltaTime);
         Destroy(gameObject, bulletLifetime);
     }
-
-    //void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    if (col.gameObject.tag == "Player")
-    //    {
-    //        Debug.Log("hit");
-    //        Destroy(this.gameObject);
-    //        col.gameObject.SetActive(false);
-    //        PlayerSpawner.shouldSpawn = true;
-    //    }
-    //}
 }

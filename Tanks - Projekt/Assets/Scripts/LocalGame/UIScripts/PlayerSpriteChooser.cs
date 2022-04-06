@@ -35,7 +35,7 @@ public class PlayerSpriteChooser : MonoBehaviour
         {
             image.sprite = sprites[playerSpriteCount];
         }
-        SaveSprites();
+        PlayerPrefs.SetInt("playerOneSprite", playerSpriteCount);
     }
 
     public void ChooseRight()
@@ -55,7 +55,7 @@ public class PlayerSpriteChooser : MonoBehaviour
         {
             image.sprite = sprites[playerSpriteCount];
         }
-        SaveSprites();
+        PlayerPrefs.SetInt("playerOneSprite", playerSpriteCount);
     }
 
     public void ChooseLeft2()
@@ -75,7 +75,7 @@ public class PlayerSpriteChooser : MonoBehaviour
         {
             image.sprite = sprites[playerSpriteCount2];
         }
-        SaveSprites();
+        PlayerPrefs.SetInt("playerTwoSprite", playerSpriteCount2);
     }
 
     public void ChooseRight2()
@@ -95,14 +95,12 @@ public class PlayerSpriteChooser : MonoBehaviour
         {
             image.sprite = sprites[playerSpriteCount2];
         }
-        SaveSprites();
+        PlayerPrefs.SetInt("playerTwoSprite", playerSpriteCount2);
     }
 
     public void SaveSprites()
     {
-        PlayerPrefs.DeleteKey("playerOneSprite");
         PlayerPrefs.SetInt("playerOneSprite", playerSpriteCount);
-        PlayerPrefs.DeleteKey("playerTwoSprite");
         PlayerPrefs.SetInt("playerTwoSprite", playerSpriteCount2);
         PlayerPrefs.Save();
     }

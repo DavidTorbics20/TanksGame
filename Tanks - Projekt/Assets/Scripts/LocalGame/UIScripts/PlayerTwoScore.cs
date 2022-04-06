@@ -16,5 +16,6 @@ public class PlayerTwoScore : MonoBehaviour
     void Update()
     {
         score.text = "Score : " + scoreValue;
+        DataSaverPrototype.P2Score = scoreValue;
     }
 }

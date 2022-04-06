@@ -95,9 +95,11 @@ In _0.4.2_ the player can move around and shoot the enemy. After a hit he/she ge
 _0.4.3_ hopefully fixed the but with the bullet acting not apropriatelly. Now it should not push away players. Update: it's not.
 Also maybe I should put the "pregame menu" and "game" in differnt scenes to make the maze generation and animations easier.
 
-_0.4.4_ The LocalGame has been separetad into two scenes to make the canvas cleaner and the replayability more efficient. Now all the values like playerSprite or playerName are stored into the PlayerPrefs folder. With this update the bug that happened before is fixed, when the player presses "New Game" the maze gets destroyed and the user gets sent back to the LocalGameLobby scenes. 
+_0.5.1_ The LocalGame has been separetad into two scenes to make the canvas cleaner and the replayability more efficient. Now all the values like playerSprite or playerName are stored into the PlayerPrefs folder. With this update the bug that happened before is fixed, when the player presses "New Game" the maze gets destroyed and the user gets sent back to the LocalGameLobby scenes. At this point the game works on a basic level but the score has to still be saved and a scoreboard has to be added as well.
 
-_0.4.5_ For future: Make the game work on a basic level.
+_0.5.2_ The maze generation is not visible when loading new game round. The scene transition after the round is delayed by 1,5 seconds. Also the player gets the color he or she really chose.
+
+_future updates_ make the data saver and scoreboard | add timer at the top of the screen and save it later (time played)
 
 ## - How To Play - 
 
@@ -115,7 +117,7 @@ where the --- represent a path and the # a stop where information will be shown.
 
 ## local game
 
-These names will then be saved in localgames.db 
+These names and scores will then be saved in localgames.db 
 
 at the same time the previously played games will be displayed with tha 5 latest games: with it the names of the players and sroce as well 
 

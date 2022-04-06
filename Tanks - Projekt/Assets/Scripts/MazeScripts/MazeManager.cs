@@ -19,7 +19,7 @@ public class MazeManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || nextRound)
         {
-            sceneTransition.LoadScene("LocalGame");
+            StartCoroutine(Restart());
         }
         nextRound = false;
     }
@@ -30,10 +30,9 @@ public class MazeManager : MonoBehaviour
         //StartCoroutine(mazeInstance.GenerateGrid());
     }
 
-    private void Restart()
+    IEnumerator Restart()
     {
-        StopAllCoroutines();
-        Destroy(mazeInstance.gameObject);
-        Begin();
+        yield return new WaitForSeconds(1.5f);
+        sceneTransition.LoadScene("LocalGame");
     }
 }
