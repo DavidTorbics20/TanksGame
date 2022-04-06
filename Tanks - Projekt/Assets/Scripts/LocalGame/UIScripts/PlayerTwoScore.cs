@@ -10,6 +10,7 @@ public class PlayerTwoScore : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("playerOneScore", scoreValue);
         score = GetComponent<Text>();
     }
 

@@ -49,8 +49,9 @@ public class LocalGameCanvasController : MonoBehaviour
         if (succ)
         {
             sceneTransition.LoadScene("LocalGame");
-            float startTime = 0f;
-            PlayerPrefs.SetFloat("startTime", startTime);
+            PlayerPrefs.SetFloat("startTime", 0f);
+            PlayerOneScore.scoreValue = 0;
+            PlayerTwoScore.scoreValue = 0;
         }
     }
 }

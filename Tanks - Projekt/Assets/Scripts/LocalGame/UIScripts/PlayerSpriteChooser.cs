@@ -16,12 +16,14 @@ public class PlayerSpriteChooser : MonoBehaviour
     {
         image = GetComponent<Image>();
         image.sprite = sprites[playerSpriteCount];
+        PlayerPrefs.SetInt("playerOneSprite", playerSpriteCount);
+        PlayerPrefs.SetInt("playerTwoSprite", playerSpriteCount2);
     }
 
     public void ChooseLeft()
     {
         playerSpriteCount -= 1;
-        if (playerSpriteCount <= 0)
+        if (playerSpriteCount < 0)
         {
             image.sprite = sprites[sprites.Length - 1];
             playerSpriteCount = sprites.Length - 1;
@@ -61,7 +63,7 @@ public class PlayerSpriteChooser : MonoBehaviour
     public void ChooseLeft2()
     {
         playerSpriteCount2 -= 1;
-        if (playerSpriteCount2 <= 0)
+        if (playerSpriteCount2 < 0)
         {
             image.sprite = sprites[sprites.Length - 1];
             playerSpriteCount2 = sprites.Length - 1;

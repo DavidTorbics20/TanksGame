@@ -50,6 +50,7 @@ public class PlayerTwoMovement : MonoBehaviour
             timeBTWAtatck -= Time.deltaTime;
         }
     }
+
     void OnCollisionEnter2D(Collision2D col)
     {
         //when player dies make its model explode and not destroy the gameobject

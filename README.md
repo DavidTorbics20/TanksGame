@@ -103,15 +103,10 @@ _0.6.1_ I added a timer to later see the time spent playing a round. Also fixed 
 
 _0.6.2_ Bot tanks no longer have white lines showing inbetween sprites.
 
+_0.6.3_ Player sprites bug fixed: now the skin that the player chooses in the lobby is the actual skin of the player even if nothing is changed. And blue skin will no longer be skipped when cycling to the left. Player score bug fixed: now when new game is started the score is set to zero.
+
 _future updates_ make the data saver and scoreboard | add timer at the top of the screen and save it later (time played) | add an "exit to main menu" button
 to the local game lobby. 
-
-# _future fixes_ 
-
-- the points are not resetted when starting new game
-- skins are not resetted when starting new game
-- reset time when starting new game
-- when i scrool through skins to the left blue dissappears
 
 ## - How To Play - 
 
