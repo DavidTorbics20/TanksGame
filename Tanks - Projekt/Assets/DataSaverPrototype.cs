@@ -13,7 +13,8 @@ public class DataSaverPrototype : MonoBehaviour
 
     public void PrintData()
     {
-        Debug.Log("" + P1Name + ": " + P1Score + " | " + P2Name + ": " + P2Score);
+        string timePlayed = PlayerPrefs.GetString("timePlayed");
+        Debug.Log("" + P1Name + ": " + P1Score + " | " + timePlayed + " | " + P2Name + ": " + P2Score);
         sceneTransition.LoadScene("LocalGameLobby");
     }
 }

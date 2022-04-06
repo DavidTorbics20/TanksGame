@@ -14,15 +14,12 @@ public class LocalGameCanvasController : MonoBehaviour
     public Text warningOne;
     public Text warningTwo;
 
-
-    private bool gameIsPaused = false;
-
     public void Start()
     {
         Canvas1.SetActive(true);
     }
 
-    public void SwitchCavas()
+    public void PressToPlay()
     {
         //looks if name-input-field is empty / if not start game 
         if (!string.IsNullOrEmpty(inputOne.text) && !string.IsNullOrEmpty(inputTwo.text))
@@ -52,6 +49,8 @@ public class LocalGameCanvasController : MonoBehaviour
         if (succ)
         {
             sceneTransition.LoadScene("LocalGame");
+            float startTime = 0f;
+            PlayerPrefs.SetFloat("startTime", startTime);
         }
     }
 }

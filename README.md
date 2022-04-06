@@ -99,7 +99,12 @@ _0.5.1_ The LocalGame has been separetad into two scenes to make the canvas clea
 
 _0.5.2_ The maze generation is not visible when loading new game round. The scene transition after the round is delayed by 1,5 seconds. Also the player gets the color he or she really chose.
 
-_future updates_ make the data saver and scoreboard | add timer at the top of the screen and save it later (time played)
+_0.6.1_ I added a timer to later see the time spent playing a round. Also fixed the name length to 10 characters for both players.
+
+_0.6.2_ Bot tanks no longer have white lines showing inbetween sprites.
+
+_future updates_ make the data saver and scoreboard | add timer at the top of the screen and save it later (time played) | add an "exit to main menu" button
+to the local game lobby.
 
 ## - How To Play - 
 
