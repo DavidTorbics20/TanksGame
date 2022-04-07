@@ -17,7 +17,7 @@ public class MazeManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || nextRound)
+        if (Input.GetKeyDown(KeyCode.R) || nextRound)
         {
             StartCoroutine(Restart());
         }

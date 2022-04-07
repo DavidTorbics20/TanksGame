@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
     public Image playerTwoSprite;
     public Sprite[] sprites;
 
-    public Animator animation;
+    public new Animator animation;
     private bool gameIsPaused = false;
 
     void Start()
