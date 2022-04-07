@@ -105,6 +105,12 @@ _0.6.2_ Bot tanks no longer have white lines showing inbetween sprites.
 
 _0.6.3_ Player sprites bug fixed: now the skin that the player chooses in the lobby is the actual skin of the player even if nothing is changed. And blue skin will no longer be skipped when cycling to the left. Player score bug fixed: now when new game is started the score is set to zero.
 
+_0.6.4_ Added a Composite Collider 2D to the Maze prefab and changed the BoxCollider2D on of the cell walls. With this unwanted movement of the ball should be cancelled.
+
+![composite collider](./pics/CompositeCollider.PNG) ![box collider of a wall](./pics/BoxCollider2D%20of%20a%20wall.PNG) 
+
+_0.6.5_ Added a button that gets the player back to the main menu in the LocalGameLobby scene. Also fixed some sizes of items on the canvas.
+
 _future updates_ make the data saver and scoreboard | add timer at the top of the screen and save it later (time played) | add an "exit to main menu" button
 to the local game lobby. 
 
