@@ -111,6 +111,8 @@ _0.6.4_ Added a Composite Collider 2D to the Maze prefab and changed the BoxColl
 
 _0.6.5_ Added a button that gets the player back to the main menu in the LocalGameLobby scene. Also fixed some sizes of items on the canvas.
 
+_0.6.6_ Changed some button textures.
+
 _future updates_ make the data saver and scoreboard | add timer at the top of the screen and save it later (time played) | add an "exit to main menu" button
 to the local game lobby. 
 
