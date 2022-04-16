@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 910, y: 471}
   m_MaxSize: {x: 22005, y: 14021}
   vertical: 0
-  controlID: 1109
+  controlID: 590
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 471}
   m_MaxSize: {x: 10001, y: 14021}
   vertical: 1
-  controlID: 1110
+  controlID: 545
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,7 +200,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 56fbffff3c3c0000a43c0000b83c0000
+      m_ExpandedIDs: 0af9ffff1af9ffffe2faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -289,11 +289,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets/Sprites
+    - Assets/Scripts/LocalGame/OtherScripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Assets/Sprites
+  - Assets/Scripts/LocalGame/OtherScripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks -
     Projekt
@@ -301,9 +301,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9e3d0000
-    m_LastClickedID: 15774
-    m_ExpandedIDs: 00000000983d00009a3d00009c3d00009e3d0000a03d000000ca9a3b
+    m_SelectedIDs: ea3d0000
+    m_LastClickedID: 15850
+    m_ExpandedIDs: 00000000803d0000823d0000843d0000863d0000883d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -331,7 +331,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000983d00009a3d00009c3d00009e3d0000a03d000000ca9a3b
+    m_ExpandedIDs: 00000000803d0000823d0000843d0000863d0000883d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -356,9 +356,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b83c0000
-    m_LastClickedInstanceID: 15544
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 103d0000
+    m_LastClickedInstanceID: 15632
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000d0390000d6390000ee3800004e390000ec3a0000163a00005e3a0000f43b0000983c0000b43d000000000000043e0000fa3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 342}
   m_MaxSize: {x: 8004, y: 8042}
   vertical: 1
-  controlID: 1073
+  controlID: 591
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 1024
+  controlID: 592
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -650,8 +650,8 @@ MonoBehaviour:
     y: 670
     width: 1178
     height: 277
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 15}
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 15544
+  m_LastSelectedObjectID: 15400
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -797,8 +797,8 @@ MonoBehaviour:
     y: 0
     width: 452
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -842,8 +842,8 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 15544
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 15632
+  m_LastVerticalScrollValue: 79
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

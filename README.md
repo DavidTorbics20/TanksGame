@@ -111,7 +111,24 @@ _0.6.4_ Added a Composite Collider 2D to the Maze prefab and changed the BoxColl
 
 _0.6.5_ Added a button that gets the player back to the main menu in the LocalGameLobby scene. Also fixed some sizes of items on the canvas.
 
-_0.6.6_ Changed some button textures.
+_0.6.6_ Changed some button textures. The exit button and the button back to the main menu in the local game lobby now look like this:
+
+- Exit: 
+
+![exit](./pics/fueltankpiskel.png) 
+- Back to main menu:
+
+![back to main menu](./pics/arrow-back.png)
+
+I pickd the fuel can because I thought it looked cool and it implies that it's time to refule, aka quit the game.
+
+_0.6.7_ Timer added to the game which will also be displayed in the "Previous Games" table. Also started working on the database that stores the data from previous games. For that I created a "Plugins" folder that contains necessary files for an SQLite database. 
+
+![plugins](./pics/Plugins.PNG)
+
+_0.7.1_ Scores can be saved into a database. With "DB Browser for SQLite" you can even see the score. Update: This didn't work.
+
+_0.7.2_ 
 
 _future updates_ make the data saver and scoreboard | add timer at the top of the screen and save it later (time played) | add an "exit to main menu" button
 to the local game lobby. 
