@@ -128,10 +128,15 @@ _0.6.7_ Timer added to the game which will also be displayed in the "Previous Ga
 
 _0.7.1_ Scores can be saved into a database. With "DB Browser for SQLite" you can even see the score. Update: This didn't work.
 
-_0.7.2_ 
+_0.7.2_ The game data is saved into the LocalGameScore.db file. For that I had to change the architecure from x86 to x86_64 (Show here some screenshots of the code). For some reason the score for player two is always set to zero. 
 
-_future updates_ make the data saver and scoreboard | add timer at the top of the screen and save it later (time played) | add an "exit to main menu" button
-to the local game lobby. 
+![changed architecture](./pics/ChangedArchitecture.PNG)
+
+_0.7.3_ Fixed the bug where the score of player two is always set to zero i the database. The problem was in PlayerTwoScore.cs. The PlayerPref was called playerOneScore instead of playerTwoScore. 
+
+![playerTwoScore](./pics/P2ScoreFix.PNG)
+
+### _future updates_ make the data saver and scoreboard 
 
 ## - How To Play - 
 
@@ -146,6 +151,8 @@ My idea of visualising this  page would look something like this:
 where the --- represent a path and the # a stop where information will be shown.
 
 # ideas for the future 
+
+I could change the name to 22. It is random but still... Or name it Tanks-22
 
 ## local game
 
