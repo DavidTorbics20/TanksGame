@@ -15,7 +15,7 @@ Here are some rules I will apply to the Builds:
 
 - XX.0.0. -> means something big happened like for example a new gamemode has been added or a playable version is created
 - 0.XX.0. -> new things added to the game but not gamebreaking, for example new animations or not fully playable builds
-- 0.0.XX. -> just some minor changes like bug fixes
+- 0.0.XX. -> just some minor changes or bug fixes
 
 Not all updates will be mentioned because they only exist for testing purpose and are insignificant otherwise. Only the complete version of an update will be noted. The version not mentioned here are still playable in the ./Tanks - Projekt/Builds/ folder. 
 
