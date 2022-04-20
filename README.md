@@ -132,9 +132,16 @@ _0.7.2_ The game data is saved into the LocalGameScore.db file. For that I had t
 
 ![changed architecture](./pics/ChangedArchitecture.PNG)
 
-_0.7.3_ Fixed the bug where the score of player two is always set to zero i the database. The problem was in PlayerTwoScore.cs. The PlayerPref was called playerOneScore instead of playerTwoScore. 
+_0.7.3_ Fixed the bug where the score of player two is always set to zero i the database. The problem was in PlayerTwoScore.cs. The PlayerPref was called playerOneScore instead of playerTwoScore.
 
 ![playerTwoScore](./pics/P2ScoreFix.PNG)
+
+_0.8.1_ The player can save game data and see it in the LocalGameLobby scene. It still needs to be improved. I need to decorate it somehow and maybe also rework this whole canvas because now it looks kind of wack. The scoreboard also needts to descend instead of pushing the new entries to the right. This is how it currently looks:
+
+![scoreboard](./pics/Scoreboard.PNG)
+
+_0.8.2_ Fixed the color of the buttons when selecting skins.
+
 
 ### _future updates_ make the data saver and scoreboard 
 

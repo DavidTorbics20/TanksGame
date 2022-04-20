@@ -34,7 +34,6 @@ public class DataSaver : MonoBehaviour
 
     private void CreateDB()
     {
-        Debug.Log("DB created");
         using (var connection = new SqliteConnection(filepath))
         {
             connection.Open();
@@ -51,12 +50,10 @@ public class DataSaver : MonoBehaviour
             }
             connection.Close();
         }
-        Debug.Log("connection closed");
     }
 
     private void AddScore()
     {
-        Debug.Log("started adding");
         string p1Name = PlayerPrefs.GetString("playerOneName");
         int p1Score = PlayerPrefs.GetInt("playerOneScore");
         string time = PlayerPrefs.GetString("timePlayed");
@@ -83,6 +80,5 @@ public class DataSaver : MonoBehaviour
             }
             connection.Close();
         }
-        Debug.Log("score added");
     }
 }
