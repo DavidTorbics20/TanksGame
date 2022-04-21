@@ -57,14 +57,16 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/Account.unity:
     - Class: 1
@@ -244,8 +246,6 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11192}
-    - Class: 114
       Script: {instanceID: 11194}
     - Class: 114
       Script: {instanceID: 11196}
@@ -255,6 +255,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11200}
     - Class: 114
       Script: {instanceID: 11230}
+    - Class: 114
+      Script: {instanceID: 11838}
+    - Class: 114
+      Script: {instanceID: 11864}
     - Class: 114
       Script: {instanceID: 12206}
     - Class: 114
@@ -267,6 +271,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12814}
     - Class: 114
       Script: {instanceID: 13304}
+    - Class: 114
+      Script: {instanceID: 13428}
     - Class: 114
       Script: {instanceID: 13592}
     - Class: 114
@@ -286,8 +292,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1678,4 +1682,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/OnlineWaitingRoom.unity
   - Assets/Scenes/LocalGame.unity
   playerPath: C:/Users/torbi/source/repos/PersonalRepos/TanksGame/Tanks - Projekt/Builds/Tanks
-    0.8.3/Tanks.exe
+    0.8.4/Tanks.exe

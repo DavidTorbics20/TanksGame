@@ -23,7 +23,6 @@ public class ScoreboardManager : MonoBehaviour
 
         CreateDB();
         GetNames();
-        DisplayNames();
 
         //p1Names.Clear();
         //p2Names.Clear();

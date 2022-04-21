@@ -144,6 +144,8 @@ _0.8.2_ Fixed the color of the buttons when selecting skins.
 
 _0.8.3_ The scoreboard now works as it is supposed to. Almost. It displays the names of the players from previous games but not the points and time. I will have to also rework the design. Maybe it would be better to separeta the scoreboard and the new game into different canvases. If so then I can make the private game customisable (lootboxes yes/no, map size, and other things).
 
+_0.8.4_ Scorboard is working cleaaan. The content box height now scales apropriatelly and is elastic. 
+
 
 ### _future updates_ make the data saver and scoreboard 
 
@@ -163,16 +165,9 @@ where the --- represent a path and the # a stop where information will be shown.
 
 I could change the name to 22. It is random but still... Or name it Tanks-22
 
-## local game
-
-These names and scores will then be saved in localgames.db 
-
-at the same time the previously played games will be displayed with tha 5 latest games: with it the names of the players and sroce as well 
-
 ## local and online game
 
-so to make the game more exciting i will ad a "lucky box" where you can get new weapons from. for example instead of shooting a regular shot you shoot 4 slighly smaller bullets aka a shotgun.
-so on and so forth. i will still collet ideas but for now its just important to remember this
+so to make the game more exciting i will ad a "lucky box" where you can get new weapons from. for example instead of shooting a regular shot you shoot 4 slighly smaller bullets aka a shotgun. so on and so forth. i will still collet ideas but for now its just important to remember this
 
 Weapons ideas:
 
