@@ -142,6 +142,8 @@ _0.8.1_ The player can save game data and see it in the LocalGameLobby scene. It
 
 _0.8.2_ Fixed the color of the buttons when selecting skins.
 
+_0.8.3_ The scoreboard now works as it is supposed to. Almost. It displays the names of the players from previous games but not the points and time. I will have to also rework the design. Maybe it would be better to separeta the scoreboard and the new game into different canvases. If so then I can make the private game customisable (lootboxes yes/no, map size, and other things).
+
 
 ### _future updates_ make the data saver and scoreboard 
 
