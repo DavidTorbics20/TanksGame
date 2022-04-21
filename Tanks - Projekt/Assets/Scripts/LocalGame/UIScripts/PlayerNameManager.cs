@@ -17,7 +17,5 @@ public class PlayerNameManager : MonoBehaviour
         PlayerPrefs.SetString("playerOneName", inputText[0].text);
         playerName[1] = PlayerPrefs.GetString("name2", "none");
         PlayerPrefs.SetString("playerTwoName", inputText[1].text);
-        DataSaverPrototype.P1Name = inputText[0].text;
-        DataSaverPrototype.P2Name = inputText[1].text;
     }
 }

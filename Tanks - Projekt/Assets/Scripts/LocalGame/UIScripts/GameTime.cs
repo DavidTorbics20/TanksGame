@@ -8,6 +8,7 @@ public class GameTime : MonoBehaviour
     Text timeText;
 
     private float elapsedTime;
+    public static bool isPaused;
 
     void Start()
     {
@@ -16,6 +17,14 @@ public class GameTime : MonoBehaviour
     }
 
     void Update()
+    {
+        if (!isPaused)
+        {
+            PrintTime();
+        }
+    }
+
+    public void PrintTime()
     {
         elapsedTime += Time.deltaTime;
         var timeSpan = System.TimeSpan.FromSeconds(elapsedTime);

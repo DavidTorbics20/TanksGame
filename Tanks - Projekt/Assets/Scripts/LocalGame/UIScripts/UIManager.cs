@@ -47,6 +47,7 @@ public class UIManager : MonoBehaviour
         canvas2.SetActive(true);
         //Time.timeScale = 0f;
         gameIsPaused = true;
+        GameTime.isPaused = true;
     }
 
     public void Resume()
@@ -54,5 +55,6 @@ public class UIManager : MonoBehaviour
         canvas2.SetActive(false);
         //Time.timeScale = 1f;
         gameIsPaused = false;
+        GameTime.isPaused = false;
     }
 }

@@ -148,6 +148,8 @@ _0.8.4_ Scoreboard doesn't show the names in the scoreboard table.
 
 _0.8.5_ Scorboard is working cleaaan. The content box height now scales apropriatelly and is elastic. But it needs to be fixed in the future to start from the top when table has 1 or 2 entries.
 
+_0.8.6_ Fixed an issue where if a game was played where the player names are the same as before will not be displayed. Also moved the scoreboard onto a new canvas to make room for custom game settings. The timer in LocalGame no longer runs when game is paused.
+
 
 ### _future updates_ make the data saver and scoreboard 
 
@@ -166,6 +168,10 @@ where the --- represent a path and the # a stop where information will be shown.
 # ideas for the future 
 
 I could change the name to 22. It is random but still... Or name it Tanks-22
+
+## local game
+
+add a settings section where the scoreboard is (at least in v0.8.5)
 
 ## local and online game
 

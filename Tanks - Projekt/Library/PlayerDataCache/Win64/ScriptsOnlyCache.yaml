@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     - BotMovement
     - BulletControl
     - DataSaver
-    - DataSaverPrototype
     - GameTime
     - LocalGameCanvasController
     - MazeCell
@@ -23,6 +22,7 @@ ScriptsOnlyBuild:
     - PlayerTwoScore
     - RowUI
     - SceneTransition
+    - ScoreboardHider
     - ScoreboardManager
     - UIManager
     Unity.2D.Animation.Editor.dll:
@@ -45,8 +45,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -62,7 +64,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
-    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Text
@@ -258,8 +259,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11838}
     - Class: 114
-      Script: {instanceID: 11864}
-    - Class: 114
       Script: {instanceID: 12206}
     - Class: 114
       Script: {instanceID: 12412}
@@ -285,6 +284,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14258}
     - Class: 114
       Script: {instanceID: 14902}
+    - Class: 114
+      Script: {instanceID: 19898}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1056,12 +1057,6 @@ ScriptsOnlyBuild:
     className: CanvasController
   - hash:
       serializedVersion: 2
-      Hash: 08b29e97da6e7cb944bc6a2e483ab295
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DataSaverPrototype
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1332,7 +1327,7 @@ ScriptsOnlyBuild:
     className: NetworkLobbyPlayer
   - hash:
       serializedVersion: 2
-      Hash: 1d940d68f24ab52c9a528eb1dfcb7586
+      Hash: 384f9dbd5cebb2cb3241ec4357402704
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RowUI
@@ -1672,6 +1667,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
+  - hash:
+      serializedVersion: 2
+      Hash: 5724eb533c1444081a9f1a34182b1a64
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreboardHider
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
@@ -1682,4 +1683,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/OnlineWaitingRoom.unity
   - Assets/Scenes/LocalGame.unity
   playerPath: C:/Users/torbi/source/repos/PersonalRepos/TanksGame/Tanks - Projekt/Builds/Tanks
-    0.8.5/Tanks.exe
+    0.8.6/Tanks.exe

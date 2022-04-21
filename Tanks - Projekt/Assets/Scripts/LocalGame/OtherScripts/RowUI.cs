@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class RowUI : MonoBehaviour
 {
     public Text p1Name;
+    public Text p1Score;
+    public Text time;
+    public Text p2Score;
     public Text p2Name;
     public Image image;
 

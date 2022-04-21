@@ -11,11 +11,13 @@ public class DataSaver : MonoBehaviour
 
     public Text filepathGUI;
 
-    public static string dbName;
+    private string dbName;
     private string filepath;
 
     void Start() 
     {
+        dbName = ScoreboardManager.dbName;
+        Debug.Log(dbName);
         filepath = "URI=file:" + Application.dataPath + "/" + dbName + ".db";
         //filepathGUI.text = filepath;
     }
@@ -39,7 +41,8 @@ public class DataSaver : MonoBehaviour
             connection.Open();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "create table if not exists localgamescore (PK integer," +
+                command.CommandText = "create table if not exists " + dbName.ToLower() + 
+                    "(PK integer," +
                     "P1Name text, " +
                     "P1Score integer, " +
                     "Time text, " +
@@ -65,7 +68,7 @@ public class DataSaver : MonoBehaviour
             connection.Open();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "insert into localgamescore (" +
+                command.CommandText = "insert into " + dbName.ToLower() + " (" +
                     "P1Name, " +
                     "P1Score, " +
                     "Time, " +
