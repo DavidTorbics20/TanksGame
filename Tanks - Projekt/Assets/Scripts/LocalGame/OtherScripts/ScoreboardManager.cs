@@ -14,18 +14,23 @@ public class ScoreboardManager : MonoBehaviour
     private List<string> p2Names = new List<string>();
 
     private string filepath;
-    public string dbName = "LocalGameScore";
+    public const string dbName = "LocalGameScore";
 
-    void Awake()
+    void Start()
     {
-        dbName = "LocalGameScore";
+        DataSaver.dbName = dbName;
+
         filepath = "URI=file:" + Application.dataPath + "/" + dbName + ".db";
 
-        CreateDB();
-        GetNames();
+        if (!File.Exists(Application.dataPath + "/" + dbName))
+        {
+            SqliteConnection.CreateFile(Application.dataPath + "/" + dbName);
+            CreateDB();
+        }
 
-        //p1Names.Clear();
-        //p2Names.Clear();
+        GetNames();
+        DisplayNames();
+
     }
 
     private void CreateDB()

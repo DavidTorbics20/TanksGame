@@ -144,7 +144,9 @@ _0.8.2_ Fixed the color of the buttons when selecting skins.
 
 _0.8.3_ The scoreboard now works as it is supposed to. Almost. It displays the names of the players from previous games but not the points and time. I will have to also rework the design. Maybe it would be better to separeta the scoreboard and the new game into different canvases. If so then I can make the private game customisable (lootboxes yes/no, map size, and other things).
 
-_0.8.4_ Scorboard is working cleaaan. The content box height now scales apropriatelly and is elastic. 
+_0.8.4_ Scoreboard doesn't show the names in the scoreboard table.
+
+_0.8.5_ Scorboard is working cleaaan. The content box height now scales apropriatelly and is elastic. But it needs to be fixed in the future to start from the top when table has 1 or 2 entries.
 
 
 ### _future updates_ make the data saver and scoreboard 

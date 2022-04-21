@@ -1188,7 +1188,7 @@ ScriptsOnlyBuild:
     className: SceneTransition
   - hash:
       serializedVersion: 2
-      Hash: fbfef8ad53422afedbae188f484f2d6c
+      Hash: 7866be66fe21b147c89b6a93b3b07bb6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DataSaver
@@ -1452,7 +1452,7 @@ ScriptsOnlyBuild:
     className: NetworkIdentity
   - hash:
       serializedVersion: 2
-      Hash: 6630b59b4c266d504e1c55cce7501efa
+      Hash: 8d950791b3835052948f4515abd7eb3b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreboardManager
@@ -1682,4 +1682,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/OnlineWaitingRoom.unity
   - Assets/Scenes/LocalGame.unity
   playerPath: C:/Users/torbi/source/repos/PersonalRepos/TanksGame/Tanks - Projekt/Builds/Tanks
-    0.8.4/Tanks.exe
+    0.8.5/Tanks.exe

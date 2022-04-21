@@ -11,7 +11,7 @@ public class DataSaver : MonoBehaviour
 
     public Text filepathGUI;
 
-    public string dbName = "LocalGameScore";
+    public static string dbName;
     private string filepath;
 
     void Start() 
