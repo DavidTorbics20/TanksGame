@@ -105,9 +105,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14902}
+      Script: {instanceID: 14906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -178,8 +178,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12578}
     - Class: 114
-      Script: {instanceID: 12834}
-    - Class: 114
       Script: {instanceID: 12932}
     - Class: 114
       Script: {instanceID: 12976}
@@ -198,13 +196,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13882}
+      Script: {instanceID: 13884}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14574}
+      Script: {instanceID: 14578}
     - Class: 114
-      Script: {instanceID: 14902}
+      Script: {instanceID: 14906}
+    - Class: 114
+      Script: {instanceID: 38168}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -263,11 +263,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 12776}
+      Script: {instanceID: 12778}
     - Class: 114
-      Script: {instanceID: 12794}
+      Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 12814}
+      Script: {instanceID: 12816}
     - Class: 114
       Script: {instanceID: 13304}
     - Class: 114
@@ -275,17 +275,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13592}
     - Class: 114
-      Script: {instanceID: 13702}
+      Script: {instanceID: 13704}
     - Class: 114
-      Script: {instanceID: 13728}
+      Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14258}
+      Script: {instanceID: 14260}
     - Class: 114
-      Script: {instanceID: 14902}
+      Script: {instanceID: 14440}
     - Class: 114
-      Script: {instanceID: 19898}
+      Script: {instanceID: 14906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -360,11 +360,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14496}
+      Script: {instanceID: 14500}
     - Class: 114
-      Script: {instanceID: 14902}
+      Script: {instanceID: 14906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -429,11 +429,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 13882}
+      Script: {instanceID: 13884}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14902}
+      Script: {instanceID: 14906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -488,9 +488,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14902}
+      Script: {instanceID: 14906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -543,9 +543,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14902}
+      Script: {instanceID: 14906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1021,6 +1021,12 @@ ScriptsOnlyBuild:
     className: LatencySimulation
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OnlineMazeManager
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1315,6 +1321,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OnlineMazeGenerator
+  - hash:
+      serializedVersion: 2
       Hash: 6c900723cc6763cc8b727ec28c21685b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1481,6 +1493,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: NetworkLobbyManager
+  - hash:
+      serializedVersion: 2
+      Hash: b1928327151ce8a2f4ce7f4df1b7b037
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreboardHider
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1667,12 +1685,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
-  - hash:
-      serializedVersion: 2
-      Hash: 5724eb533c1444081a9f1a34182b1a64
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScoreboardHider
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
@@ -1683,4 +1695,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/OnlineWaitingRoom.unity
   - Assets/Scenes/LocalGame.unity
   playerPath: C:/Users/torbi/source/repos/PersonalRepos/TanksGame/Tanks - Projekt/Builds/Tanks
-    0.8.6/Tanks.exe
+    0.8.8/Tanks.exe

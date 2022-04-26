@@ -150,6 +150,14 @@ _0.8.5_ Scorboard is working cleaaan. The content box height now scales apropria
 
 _0.8.6_ Fixed an issue where if a game was played where the player names are the same as before will not be displayed. Also moved the scoreboard onto a new canvas to make room for custom game settings. The timer in LocalGame no longer runs when game is paused.
 
+_0.8.7_ Fixed an issue where the scoreboard was starts at the bottom. Also the isPaused in GameTime.cs now is set to false on start. Previously if you quit the saved the game the timer wouldn't start from 00:00:00.
+
+_0.8.8_ Changed some settings like canvas size, transition animation length, the scoreboard now opens with when TAB is pressed and the scoreboard has it's own button to open it up at the top of the screen. 
+
+_0.8.9_ Fixed a bug where if the scoreboard canvas is up the other one doesn't register any input.
+
+_0.9.1_ Gametester comlained about the fixed button options. Now you can choose which buttons control your character. The same button can you used twice but that's something the player has to watch out for himself. It will probably be fixed in future updates.
+
 
 ### _future updates_ make the data saver and scoreboard 
 

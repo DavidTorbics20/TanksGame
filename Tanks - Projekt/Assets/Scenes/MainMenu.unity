@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 304047329}
-  delay: 3
+  delay: 2
 --- !u!4 &1238872700
 Transform:
   m_ObjectHideFlags: 0
@@ -1910,7 +1910,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: v0.8.6
+  m_Text: v0.8.8
 --- !u!222 &1466463386
 CanvasRenderer:
   m_ObjectHideFlags: 0

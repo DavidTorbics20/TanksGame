@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040b0597f8d7e8243b52681e6854af68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneTransition: {fileID: 0}
   mazePrefab: {fileID: 7741374922241476993, guid: 62aa70c36fdef594e823b43cb8159c5e,
     type: 3}
 --- !u!1 &1009336270
@@ -681,7 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 6834542298663033433}
-  delay: 3
+  delay: 2
 --- !u!1 &3974410180043688789
 GameObject:
   m_ObjectHideFlags: 0

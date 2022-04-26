@@ -12,6 +12,7 @@ public class GameTime : MonoBehaviour
 
     void Start()
     {
+        isPaused = false;
         timeText = GameObject.Find("Time").GetComponent<Text>();
         elapsedTime = PlayerPrefs.GetFloat("startTime");
     }

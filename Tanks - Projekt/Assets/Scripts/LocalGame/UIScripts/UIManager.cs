@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        GameTime.isPaused = false;
         canvas2.SetActive(false);
         playerOneName.text = PlayerPrefs.GetString("playerOneName");
         playerTwoName.text = PlayerPrefs.GetString("playerTwoName");

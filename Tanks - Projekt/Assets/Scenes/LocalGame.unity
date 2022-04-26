@@ -918,7 +918,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneTransition: {fileID: 6028277006687181545}
   filepathGUI: {fileID: 1064031287}
-  dbName: LocalGameScore
 --- !u!1 &719607255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,7 +3067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 676004157}
-  delay: 3
+  delay: 2
 --- !u!4 &6028277006687181550
 Transform:
   m_ObjectHideFlags: 0

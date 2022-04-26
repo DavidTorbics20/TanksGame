@@ -1,27 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreboardHider : MonoBehaviour
 {
     public GameObject scoreboard;
 
-    public new Animator animation;
+    public Animator scoreboardAnim;
+    public Animator panelAnim;
 
-    private bool gameIsPaused;
+    private bool showScoreboard;
+    private bool showScoreboardBtn;
 
     void Start()
     {
-        scoreboard.SetActive(false);
+        panelAnim.Play("PanelEnd");
+        scoreboardAnim.Play("ScoreboardEnd");
+        //scoreboard.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !gameIsPaused)
+        if (Input.GetKeyDown(KeyCode.Tab) && !showScoreboard)
         {
             Pause();
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && gameIsPaused)
+        else if (Input.GetKeyDown(KeyCode.Tab) && showScoreboard)
+        {
+            Resume();
+        }
+    }
+
+    public void SetToTrue()
+    {
+        if (!showScoreboardBtn)
+        {
+            Pause();
+        }
+        else if (showScoreboardBtn)
         {
             Resume();
         }
@@ -29,16 +46,20 @@ public class ScoreboardHider : MonoBehaviour
 
     public void Pause()
     {
-        animation.Play("PauseMenuStart");
-        scoreboard.SetActive(true);
+        //scoreboard.SetActive(true);
+        panelAnim.Play("PanelStart");
+        scoreboardAnim.Play("ScoreboardStart");
         //Time.timeScale = 0f;
-        gameIsPaused = true;
+        showScoreboard = true;
+        showScoreboardBtn = true;
     }
 
     public void Resume()
     {
-        scoreboard.SetActive(false);
+        panelAnim.Play("PanelEnd");
+        scoreboardAnim.Play("ScoreboardEnd");
         //Time.timeScale = 1f;
-        gameIsPaused = false;
+        showScoreboard = false;
+        showScoreboardBtn = false;
     }
 }
