@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        animation.Play("PanelEnd");
         GameTime.isPaused = false;
         canvas2.SetActive(false);
         playerOneName.text = PlayerPrefs.GetString("playerOneName");
@@ -44,7 +45,7 @@ public class UIManager : MonoBehaviour
 
     public void Pause()
     {
-        animation.Play("PauseMenuStart");
+        animation.Play("PanelStart");
         canvas2.SetActive(true);
         //Time.timeScale = 0f;
         gameIsPaused = true;
@@ -53,6 +54,7 @@ public class UIManager : MonoBehaviour
 
     public void Resume()
     {
+        animation.Play("PanelEnd");
         canvas2.SetActive(false);
         //Time.timeScale = 1f;
         gameIsPaused = false;

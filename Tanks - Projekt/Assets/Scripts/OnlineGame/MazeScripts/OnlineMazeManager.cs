@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class OnlineMazeManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public SceneTransition sceneTransition;
+    public OnlineMazeGenerator mazePrefab;
+    private OnlineMazeGenerator mazeInstance;
+
+    public static bool nextRound;
+
     void Start()
     {
-        
+        Begin();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Begin()
     {
-        
+        mazeInstance = Instantiate(mazePrefab) as OnlineMazeGenerator;
+        //StartCoroutine(mazeInstance.GenerateGrid());
+    }
+
+    IEnumerator RoundOver()
+    {
+        yield return new WaitForSeconds(1.5f);
+        sceneTransition.LoadScene("OnlineGameLobby");
     }
 }
