@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 9052506246202673249}
   - component: {fileID: 9052506246202673251}
   - component: {fileID: 7183694253059988382}
+  - component: {fileID: 4024619843143096785}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -81,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  bullet: {fileID: 1425356862608328158, guid: 47e1d366baf25274c8d0755700573f7b, type: 3}
+  bullet: {fileID: 1425356862608328158, guid: ac06b707a8dc4c74f809060a6632ddd6, type: 3}
   bulletStart: {fileID: 9052506244288757773}
   rb: {fileID: 9052506246202673250}
   speed: 17.5
@@ -170,6 +171,20 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!114 &4024619843143096785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052506246202673248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e12e15001afe1344968116d51d99fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &9052506246239976483
 GameObject:
   m_ObjectHideFlags: 0

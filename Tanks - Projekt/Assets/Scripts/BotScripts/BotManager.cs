@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//manages the ingame bots
 public class BotManager : MonoBehaviour
 {
     public GameObject bot;
@@ -12,16 +13,21 @@ public class BotManager : MonoBehaviour
     public float delayTime;
     public static int count;
 
+    //at start runs StartSpawn()
     void Start()
     {
         StartSpawn();
     }
 
+    //start a courutine that spawns bots every x seconds
+    //x can be set inside the editor
     private void StartSpawn()
     {
         StartCoroutine(SpawnBot());
     }
 
+    //clones a bot gameobject 
+    //then waits x seconds and repeats
     public IEnumerator SpawnBot()
     {
         WaitForSeconds delay = new WaitForSeconds(delayTime);

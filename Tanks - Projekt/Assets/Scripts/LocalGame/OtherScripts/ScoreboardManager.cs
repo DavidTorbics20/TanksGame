@@ -6,10 +6,14 @@ using System.IO;
 using Mono.Data.Sqlite;
 using System.Data;
 
+//reads the .db file that has been created and prints the values into a table
+//the table rows consist of multiple RowUI.cs elements 
+//the values from the .db file are read and printed into the variables of RowUI.cs
 public class ScoreboardManager : MonoBehaviour
 {
     public RowUI rowUI;
 
+    //these lists contain every name, score and playtime that is in the database
     private List<string> p1Names = new List<string>();
     private List<string> p1Scores = new List<string>();
     private List<string> times = new List<string>();
@@ -19,6 +23,8 @@ public class ScoreboardManager : MonoBehaviour
     private string filepath;
     public static readonly string dbName = "LocalGameScore";
 
+    //creates a .db file if one doesn't exist
+    //if one exists it gets and prints the values 
     void Start()
     {
         filepath = "URI=file:" + Application.dataPath + "/" + dbName + ".db";
@@ -34,6 +40,7 @@ public class ScoreboardManager : MonoBehaviour
 
     }
 
+    //creates a table if one doesn't exist with some columns
     private void CreateDB()
     {
         using (var connection = new SqliteConnection(filepath))
@@ -55,6 +62,9 @@ public class ScoreboardManager : MonoBehaviour
         }
     }
 
+    //creates a connection to the db
+    //then selects everything from the .db file
+    //while going through every line it reads it and inserts it into the lists created above
     private void GetNames()
     {
         using (var connection = new SqliteConnection(filepath))

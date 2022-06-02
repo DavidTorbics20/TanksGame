@@ -6,7 +6,6 @@ using Mirror;
 public class PlayerMovement : NetworkBehaviour
 {
     //public PlayerSpawner playerSpawner;
-    public Camera camera;
     public GameObject bullet;
     public GameObject bulletStart;
     public Rigidbody2D rb;
@@ -16,16 +15,29 @@ public class PlayerMovement : NetworkBehaviour
     private float timeBTWAtatck;
     public float startTimeBTWAttack = 2.0f;
 
+    void Start()
+    {
+        if (!isLocalPlayer)
+        {
+            GetComponent<PlayerMovement>().enabled = false;
+            GetComponentInChildren<Camera>().enabled = false;
+        }
+    }
+
     public override void OnStartLocalPlayer()
     {
-        camera = gameObject.AddComponent<Camera>();
         Camera.main.orthographic = false;
         Camera.main.transform.SetParent(transform);
+        Camera.main.transform.position = this.gameObject.transform.position + new Vector3(0f, 0f, -10f);
     }
 
     void Update()
     {
-        if (isLocalPlayer)
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+        else
         {
             if (Input.GetKey("w"))
             {
@@ -60,6 +72,9 @@ public class PlayerMovement : NetworkBehaviour
             {
                 timeBTWAtatck -= Time.deltaTime;
             }
+
+
+            Camera.main.transform.rotation = Quaternion.Euler(0f, 0f, this.gameObject.transform.rotation.z * -1);
         }
     }
 

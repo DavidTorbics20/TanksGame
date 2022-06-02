@@ -18,10 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/OnlineGame.unity
     guid: 9ebf1f72747de604d94243f7d813ceaa
   - enabled: 1
-    path: Assets/Scenes/OnlineGameList.unity
+    path: Assets/Scenes/OnlineGameLobby.unity
     guid: 45ae713edb41681439fd5489215f73bd
   - enabled: 1
-    path: Assets/Scenes/OnlineGameLobby.unity
+    path: Assets/Scenes/OnlineGameL.unity
     guid: 79696298cd87b7b45aa7e491fb8ddd97
   - enabled: 1
     path: Assets/Scenes/Account.unity

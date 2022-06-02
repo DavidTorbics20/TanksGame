@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//when a bot spawns its sprites get some random colors
 public class BotColors : MonoBehaviour
 {
     public SpriteRenderer[] botSprite;
 
+    //a random normalized number is chosen and varied to make the bot a little more colorfull
     void Start()
     {
-        //paint bot
         float r = Random.Range(0f, 1f);
         float g = Random.Range(0f, 1f);
         float b = Random.Range(0f, 1f);

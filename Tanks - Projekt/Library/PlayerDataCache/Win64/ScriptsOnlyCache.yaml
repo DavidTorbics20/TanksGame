@@ -5,12 +5,14 @@ ScriptsOnlyBuild:
     - BotManager
     - BotMovement
     - BulletControl
+    - CustomNetworkMenu
     - DataSaver
     - GameTime
     - LocalGameCanvasController
     - MazeCell
     - MazeGenerator
     - MazeManager
+    - OnlineMazeGenerator
     - OnlineMazeManager
     - PlayerImageSpin
     - PlayerMovement
@@ -26,15 +28,13 @@ ScriptsOnlyBuild:
     - SceneTransition
     - ScoreboardHider
     - ScoreboardManager
+    - SetupLocalPlayer
     - UIManager
     Mirror.Components.dll:
     - Mirror.NetworkTransform
-    Mirror.Examples.dll:
-    - Mirror.Examples.NetworkRoom.NetworkRoomManagerExt
-    - Mirror.Examples.NetworkRoom.NetworkRoomPlayerExt
     Mirror.dll:
     - Mirror.NetworkIdentity
-    - Mirror.NetworkManagerHUD
+    - Mirror.NetworkManager
     - Mirror.NetworkStartPosition
     - kcp2k.KcpTransport
     Unity.2D.Animation.Editor.dll:
@@ -214,7 +214,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14908}
     - Class: 114
-      Script: {instanceID: 18000}
+      Script: {instanceID: 25678}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -504,11 +504,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 12578}
-    - Class: 114
       Script: {instanceID: 12708}
     - Class: 114
       Script: {instanceID: 13306}
+    - Class: 114
+      Script: {instanceID: 13690}
     - Class: 114
       Script: {instanceID: 13886}
     - Class: 114
@@ -533,7 +533,60 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/OnlineGameList.unity:
+    Assets/Scenes/OnlineGameL.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11194}
+    - Class: 114
+      Script: {instanceID: 11196}
+    - Class: 114
+      Script: {instanceID: 11200}
+    - Class: 114
+      Script: {instanceID: 11230}
+    - Class: 114
+      Script: {instanceID: 12708}
+    - Class: 114
+      Script: {instanceID: 13306}
+    - Class: 114
+      Script: {instanceID: 14156}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/OnlineGameLobby.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -549,6 +602,8 @@ ScriptsOnlyBuild:
     - Class: 50
       Script: {instanceID: 0}
     - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
@@ -575,9 +630,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11792}
+      Script: {instanceID: 11884}
+    - Class: 114
+      Script: {instanceID: 11896}
     - Class: 114
       Script: {instanceID: 12412}
     - Class: 114
@@ -585,7 +642,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13306}
     - Class: 114
-      Script: {instanceID: 14072}
+      Script: {instanceID: 13594}
+    - Class: 114
+      Script: {instanceID: 13628}
     - Class: 114
       Script: {instanceID: 14156}
     - Class: 114
@@ -596,6 +655,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14908}
     - Class: 114
       Script: {instanceID: 15034}
+    - Class: 114
+      Script: {instanceID: 20268}
+    - Class: 114
+      Script: {instanceID: 21068}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -613,23 +676,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/OnlineGameLobby.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1084,7 +1130,7 @@ ScriptsOnlyBuild:
     className: NetworkRigidbody
   - hash:
       serializedVersion: 2
-      Hash: 6cd52ee667453b0296696a66e622f2ef
+      Hash: e5b52a48d45179069ea19e1abaa9825c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1096,7 +1142,7 @@ ScriptsOnlyBuild:
     className: LatencySimulation
   - hash:
       serializedVersion: 2
-      Hash: d09ed9721923acf4ac8f0f4860b7b5ff
+      Hash: 0687baf84801144dc088b98ef0a1361c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OnlineMazeManager
@@ -1760,14 +1806,26 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
+  - hash:
+      serializedVersion: 2
+      Hash: 7fc0f521543bd1f2a4d827d473ebb517
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CustomNetworkMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetupLocalPlayer
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/LocalGame.unity
   - Assets/Scenes/LocalGameLobby.unity
   - Assets/Scenes/OnlineGame.unity
-  - Assets/Scenes/OnlineGameList.unity
   - Assets/Scenes/OnlineGameLobby.unity
+  - Assets/Scenes/OnlineGameL.unity
   - Assets/Scenes/Account.unity
   - Assets/Scenes/MazeGenerator.unity
   playerPath: C:/Users/torbi/source/repos/PersonalRepos/TanksGame/Tanks - Projekt/Builds/Tanks

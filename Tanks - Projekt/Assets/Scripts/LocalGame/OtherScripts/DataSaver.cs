@@ -5,6 +5,7 @@ using Mono.Data.Sqlite;
 using UnityEngine;
 using UnityEngine.UI;
 
+//every time I add values to the table a connection is created and then closed
 public class DataSaver : MonoBehaviour
 {
     public SceneTransition sceneTransition;
@@ -14,6 +15,8 @@ public class DataSaver : MonoBehaviour
     private string dbName;
     private string filepath;
 
+    //gets the name of the database 
+    //optionally outputs the file path 
     void Start() 
     {
         dbName = ScoreboardManager.dbName;
@@ -22,6 +25,8 @@ public class DataSaver : MonoBehaviour
         //filepathGUI.text = filepath;
     }
 
+    //check if a .db file exists 
+    //if no --> creates one if yes --> adds values to existing file
     public void SaveData()
     {
         if (!File.Exists(Application.dataPath + "/" + dbName))
@@ -34,6 +39,7 @@ public class DataSaver : MonoBehaviour
         sceneTransition.LoadScene("LocalGameLobby");
     }
 
+    //creates a table if one doesn't exist with some columns
     private void CreateDB()
     {
         using (var connection = new SqliteConnection(filepath))
@@ -55,6 +61,8 @@ public class DataSaver : MonoBehaviour
         }
     }
 
+    //reads game values from Unitys PlayerPrefs
+    //then insert these values into the table 
     private void AddScore()
     {
         string p1Name = PlayerPrefs.GetString("playerOneName");

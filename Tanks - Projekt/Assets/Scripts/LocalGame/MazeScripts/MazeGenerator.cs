@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//MazeGenerator creates cells, breaks walls and makes cool patterns
+//the resulting maze is then used for a quick round of Tanks
 public class MazeGenerator : MonoBehaviour
 {
     public MazeCell cellPrefab;
@@ -13,11 +15,15 @@ public class MazeGenerator : MonoBehaviour
     public float generationStepDelay;
     public float chance;
 
+    //Start a quick generation fo the maze
     void Start()
     {
         Invoke("GenerateGrid", 0.0f);
     }
 
+    //starts at a random coordinate
+    //then goes through every cell in cells[] until every cells is marked as visited
+    //with the use of Recursive Backtracking
     public void GeneratePath() //alternativally i could use IEnumerator
     {
         WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
@@ -53,6 +59,8 @@ public class MazeGenerator : MonoBehaviour
         ClearColors();
     }
 
+    //checks for cells if they are possible to visit and/or are not visited already
+    //if one suitable is found picks that and adds it to neighbours
     private MazeCell EnumerateNeighbours(MazeCell currentCell)
     {
         //return all possible neighbours of currentCell
@@ -60,7 +68,10 @@ public class MazeGenerator : MonoBehaviour
         MazeCell neighbour;
         MazeCell nextCell;
 
+        //colors visited cells yellow for visual reasons
+        //could/should remove this
         currentCell.sprite.color = new Color(145, 25, 0);
+
         //top
         if (CheckIfPossible(currentCell.x, currentCell.y + 1)) 
         {
@@ -128,6 +139,7 @@ public class MazeGenerator : MonoBehaviour
         return null;
     }
 
+    //checks if the net cell choice is possible
     private bool CheckIfPossible(int x, int y)
     {
         if (x < 0 || y < 0 || x > sizeX - 1 || y > sizeY - 1){
@@ -136,17 +148,20 @@ public class MazeGenerator : MonoBehaviour
             return true;
         }
     }
-
+ 
+    //get the possible neighbours from EnumerateNeighbours() and pick one
     private MazeCell PickARandomCell(List<MazeCell> neighbours)
     {
-        //get the possible neighbours from EnumerateNeighbours() and pick one
         MazeCell nextCell;
         int rnd = Random.Range(0, neighbours.Count);
         return nextCell = neighbours[rnd];
     }
 
+    //to make loops in the maze and not mess up the backtracking random walls have to be broken
+    //also keeps the walls at the edges
     private void BreakWalls(MazeCell currentCell, MazeCell nextCell)
     {
+        //depending on the direction where the maze will breaks walls will be set to false
         if (currentCell.x < nextCell.x){
             currentCell.right.SetActive(false);
         }if (currentCell.x > nextCell.x){
@@ -157,6 +172,9 @@ public class MazeGenerator : MonoBehaviour
             nextCell.top.SetActive(false);
         }
 
+        //sees if a wall is breakable 
+        //if yes breaks a random one 
+        //if no then no
         float rnd = Random.Range(0, (sizeX + sizeY) / 2);
         if (rnd <= chance && EdgeCases(currentCell.x, currentCell.y, nextCell.x, nextCell.y))
         {
@@ -181,6 +199,13 @@ public class MazeGenerator : MonoBehaviour
         }
     }
 
+
+    // !!! I added a "breakable" bool to MazeCell.cs
+    // !!! in the future I could use that to mark the celle as breakable or not
+    // !!! with that I could reduce the ammount of code by a lot
+
+
+    //doesn't destroy walls if the wall is on either side of the grid
     private bool EdgeCases(int x, int y, int z, int a)
     {
         if (x == 0 || y == 0 || x == sizeX - 1 || y == sizeY - 1 || z == 0 || a == 0 || z == sizeX - 1 || a == sizeY - 1)
@@ -192,6 +217,7 @@ public class MazeGenerator : MonoBehaviour
         }
     }
 
+    //sets the cell color to white
     private void ClearColors()
     {
         foreach (var item in cells)
@@ -200,6 +226,7 @@ public class MazeGenerator : MonoBehaviour
         }
     }
 
+    //creates a XxY grid of cells with walls
     public void GenerateGrid()
     {
         cells = new MazeCell[sizeX, sizeY];
@@ -214,6 +241,8 @@ public class MazeGenerator : MonoBehaviour
         Invoke("GeneratePath", 0.1f);
     }
 
+    //creates a cell 
+    //depending on the x and y value it sets or removes some walls at generation
     private void CreateCell(int x, int y)
     {
         MazeCell newCell = Instantiate(cellPrefab) as MazeCell;

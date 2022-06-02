@@ -17,6 +17,7 @@ namespace kcp2k
         // common
         [Header("Transport Configuration")]
         public ushort Port = 7777;
+        public static ushort inputPort;
         [Tooltip("DualMode listens to IPv6 and IPv4 simultaneously. Disable if the platform only supports IPv4.")]
         public bool DualMode = true;
         [Tooltip("NoDelay is recommended to reduce latency. This also scales better without buffers getting full.")]

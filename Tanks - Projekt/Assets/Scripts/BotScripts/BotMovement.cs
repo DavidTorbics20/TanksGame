@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//BotManager makes the bots move around the screen
 public class BotMovement : MonoBehaviour
 {
     public GameObject bot;
@@ -10,11 +11,15 @@ public class BotMovement : MonoBehaviour
     public float rotation;
     private bool turnSide;
 
+    //runs SpawnLocation at start
     void Start()
     {
         SpawnLocation();
     }
 
+    //casts a rays infront of itself 
+    //this ray detects other gameobjects
+    //if a gameobject is hit the bot turns around
     void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 1), transform.up);
@@ -40,6 +45,8 @@ public class BotMovement : MonoBehaviour
         }
     }
 
+    //randomly spawns a bot in a certain area
+    //this areas size is 20x16
     private void SpawnLocation()
     {
         int x = Random.Range(-7, 7);
@@ -67,6 +74,9 @@ public class BotMovement : MonoBehaviour
         bot.transform.Rotate(new Vector3(0f, 0f, Random.Range(0, 359)));
     }
 
+    //turns around the bot when Raycast returns (hit == true)
+    // ! currently only turns to one side
+    // ! have to make it choose a side and keep it for a certain ammount
     public void TurnRandom()
     {
         int rnd = Random.Range(0, 3);
@@ -84,6 +94,9 @@ public class BotMovement : MonoBehaviour
         }            
     }
 
+    //if the bot collides with an invisible walls around the spawn area then the 
+    //gameobject gets destroyed
+    //also allows a new bot to spawn afterwards
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "DeathZone")
