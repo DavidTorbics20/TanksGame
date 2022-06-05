@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//the name should be more like InputChecker
+//doesn't let you start the game if a name input field is empty
 public class LocalGameCanvasController : MonoBehaviour
 {
     public SceneTransition sceneTransition; 
@@ -14,14 +16,17 @@ public class LocalGameCanvasController : MonoBehaviour
     public Text warningOne;
     public Text warningTwo;
 
+    //sets Canvas1 to true 
+    //which is outdated because I now manage the scoreboard in a different way
     public void Start()
     {
         Canvas1.SetActive(true);
     }
 
+    //looks if name-input-field is empty 
+    // if not start game 
     public void PressToPlay()
     {
-        //looks if name-input-field is empty / if not start game 
         if (!string.IsNullOrEmpty(inputOne.text) && !string.IsNullOrEmpty(inputTwo.text))
         {
             warningOne.gameObject.SetActive(false);

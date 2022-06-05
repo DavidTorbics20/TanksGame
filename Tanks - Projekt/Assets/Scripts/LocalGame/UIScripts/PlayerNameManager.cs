@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Saves and displays the names the players entered
 public class PlayerNameManager : MonoBehaviour
 {
     public string[] playerName;
@@ -11,6 +12,7 @@ public class PlayerNameManager : MonoBehaviour
     public Text[] inputText;
     public Text[] loadName;
 
+    //saves both names into a list and into PlayerPrefs
     public void SaveNames()
     {
         playerName[0] = (PlayerPrefs.GetString("name1", "none"));

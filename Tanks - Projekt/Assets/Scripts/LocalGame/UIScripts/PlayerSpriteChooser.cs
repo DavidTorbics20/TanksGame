@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Sprites;
 
+//lets the player choose a sprite to distinguish each other
 public class PlayerSpriteChooser : MonoBehaviour
 {
     Image image;
@@ -12,6 +13,8 @@ public class PlayerSpriteChooser : MonoBehaviour
     private int playerSpriteCount = 0;
     private int playerSpriteCount2 = 0;
 
+    //gets the image element of the color choosing menu
+    //starts counting the current sprite
     void Start()
     {
         image = GetComponent<Image>();
@@ -20,6 +23,8 @@ public class PlayerSpriteChooser : MonoBehaviour
         PlayerPrefs.SetInt("playerTwoSprite", playerSpriteCount2);
     }
 
+    //cycles the sprites counting down
+    //after reaching an end it begins from the other side 
     public void ChooseLeft()
     {
         playerSpriteCount -= 1;
@@ -40,6 +45,8 @@ public class PlayerSpriteChooser : MonoBehaviour
         PlayerPrefs.SetInt("playerOneSprite", playerSpriteCount);
     }
 
+    //cycles the sprites counting up
+    //after reaching an end it begins from the other side 
     public void ChooseRight()
     {
         playerSpriteCount += 1;
@@ -60,6 +67,8 @@ public class PlayerSpriteChooser : MonoBehaviour
         PlayerPrefs.SetInt("playerOneSprite", playerSpriteCount);
     }
 
+    //cycles the sprites counting down
+    //after reaching an end it begins from the other side 
     public void ChooseLeft2()
     {
         playerSpriteCount2 -= 1;
@@ -80,6 +89,8 @@ public class PlayerSpriteChooser : MonoBehaviour
         PlayerPrefs.SetInt("playerTwoSprite", playerSpriteCount2);
     }
 
+    //cycles the sprites counting up
+    //after reaching an end it begins from the other side 
     public void ChooseRight2()
     {
         playerSpriteCount2 += 1;
@@ -100,6 +111,7 @@ public class PlayerSpriteChooser : MonoBehaviour
         PlayerPrefs.SetInt("playerTwoSprite", playerSpriteCount2);
     }
 
+    //the chosen sprite is saved for later use
     public void SaveSprites()
     {
         PlayerPrefs.SetInt("playerOneSprite", playerSpriteCount);

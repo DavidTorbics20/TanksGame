@@ -4,6 +4,7 @@ using UnityEngine;
 
 //MazeGenerator creates cells, breaks walls and makes cool patterns
 //the resulting maze is then used for a quick round of Tanks
+//Big thanks to Prof. Wurzinger who helpled me get started with this part of the code.
 public class MazeGenerator : MonoBehaviour
 {
     public MazeCell cellPrefab;

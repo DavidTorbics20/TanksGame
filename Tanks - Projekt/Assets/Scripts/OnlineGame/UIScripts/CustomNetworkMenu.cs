@@ -5,10 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using Mirror;
 
+//Mirror provides us with some premade NetworkUI elements 
+//I needed something else so I made this
+//the buttons on the OnlineGameLobby canvas are bound to the functions in here
 public class CustomNetworkMenu : MonoBehaviour
 {
     //public GameObject[] playerPrefabs;
 
+    //input fields for the IP address and port of the host
     public Text ipServer;
     public Text portServer;
 
@@ -19,16 +23,19 @@ public class CustomNetworkMenu : MonoBehaviour
     //    GameObject.Find("CreateButton").GetComponent<Button>().onClick.AddListener(StartServer);
     //}
 
+    //sets port so something static
     void Start()
     {
         //portServer.text = "7777";
     }
 
+    //gets called if you host game
     public void StartServer()
     {
         NetworkManager.singleton.StartHost();
     }
 
+    //joins someone through their IP and port
     public void JoinServer()
     {
         string ip = ipServer.text;
@@ -43,12 +50,15 @@ public class CustomNetworkMenu : MonoBehaviour
         }
     }
 
+    //Binds function to the Disconnect button
     public void DisconnectButton()
     {
         GameObject.Find("DisconnectButton").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("DisconnectButton").GetComponent<Button>().onClick.AddListener(Disconnect);
     }
 
+    //stops connection to server
+    //stops server if you are host
     public void Disconnect()
     {
         NetworkManager.singleton.StopClient();

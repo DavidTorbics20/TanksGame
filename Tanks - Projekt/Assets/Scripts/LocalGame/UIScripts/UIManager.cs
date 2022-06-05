@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//manages the UI elements in LocalGame
 public class UIManager : MonoBehaviour
 {
     public GameObject canvas1;
@@ -20,6 +21,8 @@ public class UIManager : MonoBehaviour
     public new Animator animation;
     private bool gameIsPaused = false;
 
+    //sets the player names into the player name fields
+    //sets the sprite of the spinning image to player sprite
     void Start()
     {
         animation.Play("PanelEnd");
@@ -31,6 +34,7 @@ public class UIManager : MonoBehaviour
         playerTwoSprite.sprite = sprites[PlayerPrefs.GetInt("playerTwoSprite")];
     }
 
+    //if ESCAPE is pressed a menu popps up
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !gameIsPaused)
@@ -43,6 +47,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //shows pause menu
     public void Pause()
     {
         animation.Play("PanelStart");
@@ -52,6 +57,7 @@ public class UIManager : MonoBehaviour
         GameTime.isPaused = true;
     }
 
+    //hides pause menu
     public void Resume()
     {
         animation.Play("PanelEnd");

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//PlayerTwoMovement is responsible for the movement of player 2
 public class PlayerTwoMovement : MonoBehaviour
 {
     public PlayerSpawner playerSpawner;
@@ -14,6 +15,10 @@ public class PlayerTwoMovement : MonoBehaviour
     private float timeBTWAtatck;
     public float startTimeBTWAttack = 2.0f;
 
+    //at every updates checks inputs
+    //with player 2 you move with UP, DOWN, LEFT, RIGHT and shoot with NUM 0
+    //later the player will be choose custom buttons
+    //also manages shootinng
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
@@ -51,9 +56,11 @@ public class PlayerTwoMovement : MonoBehaviour
         }
     }
 
+    //at collision with a gameobject tagged "Bullet" this.gameObject gets destroyed
+    //also player 1 gets plus one point
     void OnCollisionEnter2D(Collision2D col)
     {
-        //when player dies make its model explode and not destroy the gameobject
+        //idea for later: when player dies make its model explode and not destroy the gameobject
 
         if (col.gameObject.tag == "Bullet")
         {

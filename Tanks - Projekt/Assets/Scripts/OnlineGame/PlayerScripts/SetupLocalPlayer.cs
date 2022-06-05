@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
+//honestly I don't know what goes in here
 public class SetupLocalPlayer : NetworkBehaviour
 {
     // Start is called before the first frame update

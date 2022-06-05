@@ -14,6 +14,7 @@ public class RowUI : MonoBehaviour
     public Text p2Name;
     public Image image;
 
+    //gets the Image component to set the background of the row in the scoreboard
     void Start()
     {
         image.GetComponent<Image>();

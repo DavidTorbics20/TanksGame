@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//hides and shows the scoreboard
 public class ScoreboardHider : MonoBehaviour
 {
     public GameObject scoreboard;
@@ -13,6 +14,7 @@ public class ScoreboardHider : MonoBehaviour
     private bool showScoreboard;
     private bool showScoreboardBtn;
 
+    //makes sure the scoreboard is hidden when starting lobby
     void Start()
     {
         panelAnim.Play("PanelEnd");
@@ -20,6 +22,7 @@ public class ScoreboardHider : MonoBehaviour
         //scoreboard.SetActive(false);
     }
 
+    //by pressing TAB the scoreboard appears or disappears
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab) && !showScoreboard)
@@ -32,6 +35,7 @@ public class ScoreboardHider : MonoBehaviour
         }
     }
 
+    //reverses scoreboard state
     public void SetToTrue()
     {
         if (!showScoreboardBtn)
@@ -44,6 +48,7 @@ public class ScoreboardHider : MonoBehaviour
         }
     }
 
+    //plays animation that opens scoreboard
     public void Pause()
     {
         //scoreboard.SetActive(true);
@@ -54,6 +59,7 @@ public class ScoreboardHider : MonoBehaviour
         showScoreboardBtn = true;
     }
 
+    //plays animation that closes scoreboard
     public void Resume()
     {
         panelAnim.Play("PanelEnd");

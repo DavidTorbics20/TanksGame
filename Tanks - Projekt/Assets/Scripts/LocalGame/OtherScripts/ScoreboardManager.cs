@@ -92,6 +92,10 @@ public class ScoreboardManager : MonoBehaviour
         }
     }
 
+    //for every row in the .db file a row is instantiated 
+    //the values previously then are put into the fields of RowUI
+    //the list has to be reversed to displayed the games in order
+    //of the time is was played (the newer the higher up)
     private void DisplayNames()
     {
         for (int i = 0; i < p1Names.Count; i++)
@@ -102,6 +106,9 @@ public class ScoreboardManager : MonoBehaviour
             row.time.text = times[p1Names.Count - 1 - i].ToString();
             row.p2Score.text = p2Scores[p1Names.Count - 1 - i].ToString();
             row.p2Name.text = p2Names[p1Names.Count - 1 - i].ToString();
+
+            //to make the rows in the scoreboard stand out more the background
+            //igame changes every two rows to a slightly darker color
             if (i % 2 == 0)
             {
                 row.image.color = new Color(1, 1, 1);

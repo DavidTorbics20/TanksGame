@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//PlayerOneMovement is responsible for the movement of player 1
 public class PlayerOneMovement : MonoBehaviour
 {
     public PlayerSpawner playerSpawner;
@@ -14,6 +15,10 @@ public class PlayerOneMovement : MonoBehaviour
     private float timeBTWAtatck;
     public float startTimeBTWAttack = 2.0f;
 
+    //at every updates checks inputs
+    //with player 1 you move with W, A, S, D and shoot with C
+    //later the player will be choose custom buttons
+    //also manages shootinng
     void Update()
     {
         if (Input.GetKey("w"))
@@ -37,6 +42,7 @@ public class PlayerOneMovement : MonoBehaviour
             rb.rotation -= rotatSpeed * Time.deltaTime;
         }
 
+        //caps the attack speed of the player 
         if (timeBTWAtatck <= 0)
         {
             if (Input.GetKey("c"))
@@ -51,10 +57,12 @@ public class PlayerOneMovement : MonoBehaviour
         }
     }
 
+    //at collision with a gameobject tagged "Bullet" this.gameObject gets destroyed
+    //also player 2 gets plus one point
     void OnCollisionEnter2D(Collision2D col)
     {
-        //when player dies make its model explode and not destroy the gameobject
-    
+        //idea for later: when player dies make its model explode and not destroy the gameobject
+
         if (col.gameObject.tag == "Bullet")
         {
             Destroy(this.gameObject);
