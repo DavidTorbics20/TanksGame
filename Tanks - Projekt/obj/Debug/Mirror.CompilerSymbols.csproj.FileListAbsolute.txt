@@ -273,3 +273,5 @@ C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Mi
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Mirror.CompilerSymbols.csproj.CopyComplete
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Mirror.CompilerSymbols.dll
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Mirror.CompilerSymbols.pdb
+C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\Temp\bin\Debug\Mono.Data.dll
+C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\Temp\bin\Debug\Mono.Data.Sqlite.dll

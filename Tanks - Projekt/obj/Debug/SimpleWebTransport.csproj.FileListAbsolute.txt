@@ -266,3 +266,5 @@ C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Si
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\SimpleWebTransport.csproj.CopyComplete
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\SimpleWebTransport.dll
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\SimpleWebTransport.pdb
+C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\Temp\bin\Debug\Mono.Data.dll
+C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\Temp\bin\Debug\Mono.Data.Sqlite.dll

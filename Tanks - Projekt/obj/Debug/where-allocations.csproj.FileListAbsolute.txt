@@ -259,3 +259,5 @@ C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\wh
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\where-allocations.csproj.CopyComplete
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\where-allocations.dll
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\where-allocations.pdb
+C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\Temp\bin\Debug\Mono.Data.dll
+C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\Temp\bin\Debug\Mono.Data.Sqlite.dll

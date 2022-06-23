@@ -10,10 +10,10 @@ public class PlayerOneMovement : MonoBehaviour
     public GameObject bulletStart;
     public Rigidbody2D rb;
 
-    public float speed = 17.5f;
-    public float rotatSpeed = 180.0f;
-    private float timeBTWAtatck;
-    public float startTimeBTWAttack = 2.0f;
+    public float _speed = 17.5f;
+    public float _rotatSpeed = 180.0f;
+    private float _timeBTWAtatck;
+    public float _startTimeBTWAttack = 2.0f;
 
     //at every updates checks inputs
     //with player 1 you move with W, A, S, D and shoot with C
@@ -21,40 +21,62 @@ public class PlayerOneMovement : MonoBehaviour
     //also manages shootinng
     void Update()
     {
+        var deltaTime = Time.deltaTime;
+
         if (Input.GetKey("w"))
         {
             //x = speed * Time.deltaTime;
             //rb.MovePosition(transform.position + Vector3.up * speed);
-            transform.position += transform.up * Time.deltaTime * speed / 10;
+
+            int negate = 1;
+            CalculateMovement(deltaTime, _speed, negate);
         }
         if (Input.GetKey("s"))
         {
             //x = speed * Time.deltaTime;
             //rb.MovePosition(transform.position + transform.up * Time.deltaTime * -speed);
-            transform.position -= transform.up * Time.deltaTime * speed / 10;
+
+            int negate = -1;
+            CalculateMovement(deltaTime, _speed, negate);
         }
         if (Input.GetKey("a"))
         {
-            rb.rotation += rotatSpeed * Time.deltaTime;
+            int negate = 1;
+            rb.rotation += CalculateRotation(_rotatSpeed, deltaTime, negate);
         }
         if (Input.GetKey("d"))
         {
-            rb.rotation -= rotatSpeed * Time.deltaTime;
+            int negate = -1;
+            rb.rotation += CalculateRotation(_rotatSpeed, deltaTime, negate);
         }
 
         //caps the attack speed of the player 
-        if (timeBTWAtatck <= 0)
+        if (_timeBTWAtatck <= 0)
         {
             if (Input.GetKey("c"))
             {
                 Instantiate(bullet, bulletStart.transform.position, bulletStart.transform.rotation);
-                timeBTWAtatck = startTimeBTWAttack;
+                _timeBTWAtatck = _startTimeBTWAttack;
             }
         }
         else
         {
-            timeBTWAtatck -= Time.deltaTime;
+            _timeBTWAtatck -= deltaTime;
         }
+    }
+
+    //calculates direction the player should move to
+    //created just fot the tests to work
+    public void CalculateMovement(float deltaTime, float speed, float negate)
+    {
+        transform.position += transform.up * deltaTime * (speed / 10) * negate;
+    }
+
+    //calculates rotation of the player
+    //created just fot the tests to work
+    public float CalculateRotation(float rotateSpeed, float deltaTime, int negate)
+    {
+        return rotateSpeed * deltaTime * negate;
     }
 
     //at collision with a gameobject tagged "Bullet" this.gameObject gets destroyed

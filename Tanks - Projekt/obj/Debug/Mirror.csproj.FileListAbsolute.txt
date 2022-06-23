@@ -264,3 +264,5 @@ C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Mi
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Mirror.csproj.CopyComplete
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Mirror.dll
 C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\obj\Debug\Mirror.pdb
+C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\Temp\bin\Debug\Mono.Data.dll
+C:\Users\torbi\source\repos\PersonalRepos\TanksGame\Tanks - Projekt\Temp\bin\Debug\Mono.Data.Sqlite.dll

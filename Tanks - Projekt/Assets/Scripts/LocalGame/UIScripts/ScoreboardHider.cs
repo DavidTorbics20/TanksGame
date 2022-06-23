@@ -11,14 +11,17 @@ public class ScoreboardHider : MonoBehaviour
     public Animator scoreboardAnim;
     public Animator panelAnim;
 
-    private bool showScoreboard;
-    private bool showScoreboardBtn;
+    public bool showScoreboard;
+    public bool showScoreboardBtn;
 
     //makes sure the scoreboard is hidden when starting lobby
     void Start()
     {
-        panelAnim.Play("PanelEnd");
-        scoreboardAnim.Play("ScoreboardEnd");
+        if (scoreboard)
+        {
+            panelAnim.Play("PanelEnd");
+            scoreboardAnim.Play("ScoreboardEnd");
+        }
         //scoreboard.SetActive(false);
     }
 
@@ -55,8 +58,7 @@ public class ScoreboardHider : MonoBehaviour
         panelAnim.Play("PanelStart");
         scoreboardAnim.Play("ScoreboardStart");
         //Time.timeScale = 0f;
-        showScoreboard = true;
-        showScoreboardBtn = true;
+        RevertBool(showScoreboard, showScoreboardBtn);
     }
 
     //plays animation that closes scoreboard
@@ -65,7 +67,13 @@ public class ScoreboardHider : MonoBehaviour
         panelAnim.Play("PanelEnd");
         scoreboardAnim.Play("ScoreboardEnd");
         //Time.timeScale = 1f;
-        showScoreboard = false;
-        showScoreboardBtn = false;
+        RevertBool(showScoreboard, showScoreboardBtn);
+    }
+
+    //reverses some bools
+    public void RevertBool(bool bool1, bool bool2)
+    {
+        showScoreboard = !bool1;
+        showScoreboardBtn = !bool2;
     }
 }

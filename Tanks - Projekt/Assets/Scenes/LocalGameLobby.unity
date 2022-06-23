@@ -470,6 +470,8 @@ MonoBehaviour:
   scoreboard: {fileID: 6819897946961241574}
   scoreboardAnim: {fileID: 6819897946961241568}
   panelAnim: {fileID: 1229365255}
+  showScoreboard: 0
+  showScoreboardBtn: 0
 --- !u!1 &251817459
 GameObject:
   m_ObjectHideFlags: 0
